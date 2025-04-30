@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orascom Slider Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">INVESTORS</a></li>
+                <li><a href="#">SUSTAINABILITY</a></li>
+                <li><a href="#">NEWSROOM</a></li>
+                <li><a href="#">CAREERS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('assets/slider1.png');"></div>
+            <div class="slide" style="background-image: url('assets/slider2.png');"></div>
+            <div class="slide" style="background-image: url('assets/slider3.png');"></div>
+        </div>
+
+        <div class="slider-content">
+            <h1>Our story goes beyond construction</h1>
+            <p id="subtext">Decades of experience have laid out the path for a local family-owned business to become...</p>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prev">Prev.</button>
+            <button id="next">Next</button>
+        </div>
+
+        <!-- Counter -->
+        <div class="counter">
+            <span id="current">01</span>
+            <span>/</span>
+            <span id="total">03</span>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
