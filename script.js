@@ -1,54 +1,80 @@
-const slidesContainer = document.querySelector('.slides');
-const slides = document.querySelectorAll('.slide');
-const subtext = document.getElementById('subtext');
-const currentCounter = document.getElementById('current');
-const totalCounter = document.getElementById('total');
-const nextBtn = document.getElementById('next');
-const prevBtn = document.getElementById('prev');
-
-// Array of subtexts for each slide
-const subtexts = [
-    "Decades of experience have laid out the path for a local family-owned business to become...",
-    "We create sustainable landmarks that stand the test of time and enrich communities...",
-    "Innovation, dedication, and excellence drive every project we bring to life..."
-];
-
+const slides = document.querySelectorAll(".slide");
 let currentIndex = 0;
 
-// Initialize total slides
-totalCounter.textContent = `0${slides.length}`;
+function showSlide(index) {
+  const offset = -index * 100;
+  document.querySelector(".slider").style.transform = `translateX(${offset}%)`;
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
 
-function updateSlider() {
-    // تحريك السلايدر باستخدام transform
-    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    subtext.textContent = subtexts[currentIndex];
-    currentCounter.textContent = `0${currentIndex + 1}`;
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
 }
-
-nextBtn.addEventListener('click', () => {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-    updateSlider();
-});
-
-prevBtn.addEventListener('click', () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    }
-    updateSlider();
-});
-
-// Auto Slide every 2 seconds
 setInterval(() => {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-    updateSlider();
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
 }, 5000);
 
-// Initial state
-updateSlider();
+const dots = document.querySelectorAll(".dot");
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentIndex = index;
+    showSlide(index);
+  });
+});
+
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightboxOverlay");
+const lightboxImg = document.getElementById("lightboxImage");
+const closeBtn = document.getElementById("lightboxClose");
+
+galleryImages.forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("show");
+    lightboxImg.src = img.src;
+  });
+});
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("show");
+});
+
+const navLinks = document.querySelectorAll("nav a");
+const popups = {
+  "About Us": document.getElementById("About Us-popup"),
+  "Services": document.getElementById("Services-popup"),
+  "Projects": document.getElementById("Projects-popup"),
+  "NewsRoom": document.getElementById("NewsRoom-popup"),
+  "Contact Us": document.getElementById("Contact Us-popup"),
+};
+
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const text = link.textContent.trim();
+    Object.values(popups).forEach(p => p.style.display = "none");
+    if (popups[text]) {
+      popups[text].style.display = "block";
+    }
+  });
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("nav") && !e.target.closest(".popup")) {
+    Object.values(popups).forEach(p => p.style.display = "none");
+  }
+});
+
+const hamburger = document.getElementById("hamburger");
+const navList = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navList.classList.toggle("show");
+  const nav = document.querySelector("nav");
+  if (navList.classList.contains("show")) {
+    nav.style.display = "block";
+  } else {
+    nav.style.display = "none";
+  }
+});

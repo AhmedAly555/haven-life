@@ -1,146 +1,401 @@
-/* Reset and base styles */
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body,
-html {
-    height: 100%;
-    font-family: 'Arial', sans-serif;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-
-/* Header styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+    background-color: transparent;
+    color: black;
+}
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    z-index: 10;
-}
-
-.logo img {
-    width: 120px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
+    padding: 15px 200px;
+    position: absolute;
+    width: 90%;
+    top: 30px;
+    left: 0;
     color: white;
-    padding: 8px 15px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    z-index: 10;
+    background: transparent;
 }
 
-.navbar ul li a:hover {
-    border: 1px solid white;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+header .logo img {
+    height: 130px;
 }
 
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-/* Slider styles */
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+.slider-container {
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
 
 .slider {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.slides {
     display: flex;
-    width: 100%;
     height: 100%;
-    transition: transform 2.0s ease-in-out;
-    /* أنيميشن سلس للانتقال */
+    transition: transform 2.5s ease-in-out;
 }
 
 .slide {
-    flex: 0 0 100%;
-    /* كل شريحة تأخذ عرض الشاشة بالكامل */
-    height: 90%;
+    min-width: 100%;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
 }
 
-
-/* Slider content */
-
-.slider-content {
+.slide-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 5;
-}
-
-.slider-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.slider-content p {
-    font-size: 20px;
-    max-width: 600px;
-    margin: auto;
-}
-
-
-/* Controls */
-
-.controls {
-    position: absolute;
-    right: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 5;
-}
-
-.controls button {
+    bottom: 350px;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
     background: transparent;
     color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.controls button:hover {
-    color: #f0a500;
-}
-
-
-/* Counter */
-
-.counter {
+.dots {
     position: absolute;
-    bottom: 30px;
-    left: 50px;
-    color: white;
-    font-size: 18px;
-    z-index: 5;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
 }
 
-.counter span {
-    margin: 0 5px;
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.dot.active {
+    opacity: 1;
+}
+
+.about-overview {
+    padding: 80px 20px;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.overview-text {
+    flex: 1 1 500px;
+    max-width: 600px;
+}
+
+.overview-images {
+    flex: 1 1 400px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.overview-img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-subtitle {
+    color: #f5c32e;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f5c32e;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #003366a8;
+    margin: 10px 0 20px;
+}
+
+.section-description {
+    font-size: 0.9em;
+    width: 70%;
+    line-height: 2.0;
+    color: #333;
+}
+
+.explore-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    border: 2px solid #f5c32e;
+    color: #f5c32e;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #f5c32e;
+    color: #fff;
+}
+
+.gallery-section {
+    padding: 40px;
+    background: #f9f9f9;
+    text-align: center;
+    background-color: transparent;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.gallery img:hover,
+.overview-img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+#lightboxOverlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+#lightboxOverlay.show {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lightboxImage {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+#lightboxClose {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background-color: rgba(121, 123, 125, 0.9);
+    color: white;
+    padding: 20px;
+    z-index: 999;
+}
+
+.popup-content {
+    font-size: 22px;
+    line-height: 2;
+    padding: 100px 100px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+/* عند تفعيل الزر */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 35px;
+    }
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        display: none;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    header nav li {
+        margin: 10px 0;
+    }
+    header nav a {
+        font-size: 14px;
+        /* أو أي حجم يناسبك */
+    }
+    header {
+        padding: 15px 20px;
+        width: 100%;
+        flex-direction: column;
+    }
+    header nav {
+        display: none;
+    }
+    header nav ul.show {
+        display: flex;
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        background: transparent;
+        font-size: 10px;
+    }
+    header .logo img {
+        height: 100px;
+        /* تصغير حجم اللوجو للموبايل */
+    }
+    .slide-text {
+        bottom: 80px;
+        left: 50%;
+        font-size: .8em;
+    }
+    .popup-content {
+        padding: 20px;
+        font-size: 12px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+    .popup {
+        display: none !important;
+    }
+}
+
+
+/*footer*/
+
+footer .social a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .social a img:hover {
+    transform: scale(1.1);
 }
