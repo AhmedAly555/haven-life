@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #1a1a1a;
+}
+
+.services-container {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.service.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.service img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.service-text {
+    flex: 1;
+}
+
+.service-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0077b6;
+}
+
+.service-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .service img {
+        width: 100%;
+        height: auto;
+    }
+}
