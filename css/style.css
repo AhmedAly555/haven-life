@@ -389,7 +389,8 @@ footer {
 
 /*footer*/
 
-footer .social a img {
+
+/* footer .social a img {
     width: 30px;
     height: 30px;
     margin: 0 10px;
@@ -398,4 +399,66 @@ footer .social a img {
 
 footer .social a img:hover {
     transform: scale(1.1);
+} */
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 100%;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 100%;
+}
+
+footer .social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* filter: brightness(0) invert(1); */
+    /* خليها بيضاء لو الخلفية غامقة */
+}
+
+footer .social a img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+
+/* Responsive Design */
+
+@media (min-width: 600px) {
+    .footer-content {
+        flex-wrap: nowrap;
+    }
+    .footer-content p {
+        flex: 1;
+        text-align: left;
+    }
+    .footer-content .social {
+        justify-content: flex-end;
+        flex: 1;
+    }
 }
