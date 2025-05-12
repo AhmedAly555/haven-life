@@ -1,6 +1,21 @@
+/* headder */
+const hamburger = document.getElementById("hamburger");
+const navList = document.querySelector("nav ul");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navList.classList.toggle("show");
+    const nav = document.querySelector("nav");
+    if (navList.classList.contains("show")) {
+        nav.style.display = "block";
+    } else {
+        nav.style.display = "none";
+    }
+});
+
+/* Slider effect */
 const slides = document.querySelectorAll(".slide");
 let currentIndex = 0;
-
 function showSlide(index) {
     const offset = -index * 100;
     document.querySelector(".slider").style.transform = `translateX(${offset}%)`;
@@ -22,35 +37,4 @@ dots.forEach((dot, index) => {
         currentIndex = index;
         showSlide(index);
     });
-});
-
-const galleryImages = document.querySelectorAll(".gallery img");
-const lightbox = document.getElementById("lightboxOverlay");
-const lightboxImg = document.getElementById("lightboxImage");
-const closeBtn = document.getElementById("lightboxClose");
-
-galleryImages.forEach(img => {
-    img.addEventListener("click", () => {
-        lightbox.classList.add("show");
-        lightboxImg.src = img.src;
-    });
-});
-closeBtn.addEventListener("click", () => {
-    lightbox.classList.remove("show");
-});
-
-
-
-const hamburger = document.getElementById("hamburger");
-const navList = document.querySelector("nav ul");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navList.classList.toggle("show");
-    const nav = document.querySelector("nav");
-    if (navList.classList.contains("show")) {
-        nav.style.display = "block";
-    } else {
-        nav.style.display = "none";
-    }
 });
