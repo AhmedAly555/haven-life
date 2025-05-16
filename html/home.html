@@ -15,51 +15,53 @@
 </head>
 
 <body>
-    <header class="fade-in">
-        <div class="logo"><img src="../assets/pic/logo.png" alt="Logo"></div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../html/about-us.html">About Us</a></li>
-                <li><a href="../html/services.html">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">NewsRoom</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
+    <script>
+    fetch("../html/header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide active" style="background-image: url('../assets/pic/img1.jpg')">
-                <div class="slide-text">We build your vision with <br><span class="gap"></span> elegance and precision</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/img2.jpg')">
-                <div class="slide-text">Your space deserves more than <br><span class="gap"></span>walls it deserves Heaven Life</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/img3.jpg')">
-                <div class="slide-text">Transforming spaces, <br><span class="gap"></span> elevating lifestyles</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/img4.jpg')">
-                <div class="slide-text">Transforming spaces, <br><span class="gap"></span> elevating lifestyles</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/img5.jpg')">
-                <div class="slide-text">Transforming spaces, <br><span class="gap"></span> elevating lifestyles</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/img6.jpg')">
-                <div class="slide-text">Transforming spaces, <br><span class="gap"></span> elevating lifestyles</div>
-            </div>
-        </div>
-        <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navList.classList.toggle("show");
+
+          const nav = document.querySelector("nav");
+          if (navList.classList.contains("show")) {
+            nav.style.display = "block";
+          } else {
+            nav.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <script>
+    fetch("../html/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+        const script = document.createElement("script");
+        script.src = "../js/header.js";
+        document.body.appendChild(script);
+      });
+    </script>
+    <div id="mySlider"></div>
+    <script>
+    fetch('../html/slider.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('mySlider').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = '../js/slider.js';
+        script.onload = () => {
+            initSlider();
+        };
+        document.body.appendChild(script);
+        });
+  </script>
     <section class="about-overview">
         <div class="overview-container">
             <div class="overview-text">
@@ -217,12 +219,13 @@
 
     <footer>
         <div class="footer-content">
-            <p>© 2025 Heaven Life. All rights reserved.</p>
+            
             <div class="social">
                 <a href="#"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
                 <a href="#"><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
                 <a href="#"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
             </div>
+            <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
     </footer>
 
@@ -235,6 +238,8 @@
     <script src="../js/cards-animation.js"></script>
     <script src="../js/gallery.js"></script>
     <script src="../js/scroll.js"></script>
+    <script src="../js/header.js"></script>
+
 </body>
 
 </html>
