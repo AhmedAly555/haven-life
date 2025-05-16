@@ -21,9 +21,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px;
+    padding: 15px 450px;
     position: absolute;
-    width: 90%;
+    width: 110%;
     top: 30px;
     left: 0;
     color: white;
@@ -173,10 +173,10 @@ header nav a:hover::after {
 }
 
 footer {
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 30px 20px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    color: #003366a8;
+    padding: 20px 20px;
+    box-shadow:transparent;
 }
 
 .footer-content {
@@ -187,6 +187,8 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    flex-direction: column;
+
 }
 
 .footer-content p {
@@ -232,3 +234,4 @@ footer .social a img:hover {
         flex: 1;
     }
 }
+

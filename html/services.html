@@ -8,54 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/services.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
+
 </head>
 
 <body>
-    <header class="fade-in">
-        <div class="logo"><img src="../assets/pic/logo.png" alt="Logo"></div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../html/home.html">Home</a></li>
-                <li><a href="../html/about-us.html">About Us</a></li>
-                <li><a href="../html/services.html">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">NewsRoom</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
+    <script>
+    fetch("../html/header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
+        const hamburger = document.getElementById("hamburger");
+        const navList = document.querySelector("nav ul");
 
-    <div class="slider-container">
-        <div class="slider">
-            <div class="slide active" style="background-image: url('../assets/pic/slide-1.jpg')">
-                <div class="slide-text">We build your vision with <br><span class="gap"></span> elegance and precision</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/slide-2.jpg')">
-                <div class="slide-text">Your space deserves more than <br><span class="gap"></span>walls it deserves Heaven Life</div>
-            </div>
-            <div class="slide" style="background-image: url('../assets/pic/slide-3.jpg')">
-                <div class="slide-text">Transforming spaces, <br><span class="gap"></span> elevating lifestyles</div>
-            </div>
-        </div>
-        <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          navList.classList.toggle("show");
+
+          const nav = document.querySelector("nav");
+          if (navList.classList.contains("show")) {
+            nav.style.display = "block";
+          } else {
+            nav.style.display = "none";
+          }
+        });
+      });
+    </script>
+    <script>
+    fetch("../html/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+        const script = document.createElement("script");
+        script.src = "../js/header.js";
+        document.body.appendChild(script);
+      });
+    </script>
+
+    <div id="mySlider"></div>
+    <script>
+    fetch('../html/slider.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('mySlider').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = '../js/slider.js';
+        script.onload = () => {
+            initSlider();
+        };
+        document.body.appendChild(script);
+        });
+    </script>
 
 
 
     <h1 class="section-title">Our Services</h1>
 
     <div class="services-container">
-        <!-- Example Service -->
         <div class="service">
             <img src="../assets/pic/img-1.jpg" alt="Project Management">
             <div class="service-text">
