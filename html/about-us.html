@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/services.css">
     <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="stylesheet" href="../css/contact-us.css" />
 
 
 
@@ -18,57 +19,57 @@
 <body>
     <div id="header"></div>
     <script>
-    fetch("../html/header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
+        fetch("../html/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
 
-        const hamburger = document.getElementById("hamburger");
-        const navList = document.querySelector("nav ul");
+                const hamburger = document.getElementById("hamburger");
+                const navList = document.querySelector("nav ul");
 
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          navList.classList.toggle("show");
+                hamburger.addEventListener("click", () => {
+                    hamburger.classList.toggle("active");
+                    navList.classList.toggle("show");
 
-          const nav = document.querySelector("nav");
-          if (navList.classList.contains("show")) {
-            nav.style.display = "block";
-          } else {
-            nav.style.display = "none";
-          }
-        });
-      });
+                    const nav = document.querySelector("nav");
+                    if (navList.classList.contains("show")) {
+                        nav.style.display = "block";
+                    } else {
+                        nav.style.display = "none";
+                    }
+                });
+            });
     </script>
     <script>
-    fetch("../html/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-        const script = document.createElement("script");
-        script.src = "../js/header.js";
-        document.body.appendChild(script);
-      });
+        fetch("../html/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                const script = document.createElement("script");
+                script.src = "../js/header.js";
+                document.body.appendChild(script);
+            });
     </script>
 
 
     <div id="mySlider"></div>
     <script>
-    fetch('../html/slider.html')
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById('mySlider').innerHTML = data;
-        const script = document.createElement('script');
-        script.src = '../js/slider.js';
-        script.onload = () => {
-            initSlider();
-        };
-        document.body.appendChild(script);
-        });
+        fetch('../html/slider.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('mySlider').innerHTML = data;
+                const script = document.createElement('script');
+                script.src = '../js/slider.js';
+                script.onload = () => {
+                    initSlider();
+                };
+                document.body.appendChild(script);
+            });
     </script>
 
 
 
-    <h1 class="section-title">About Us</h1>
+    <h1 class="text-content">About Us</h1>
 
     <audio id="bgMusic" autoplay loop>
     <source src="your-music-file.mp3" type="audio/mp3">
@@ -100,12 +101,13 @@
 
     <footer>
         <div class="footer-content">
-            <p>© 2025 Heaven Life. All rights reserved.</p>
+
             <div class="social">
                 <a href="#"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
                 <a href="#"><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
                 <a href="#"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
             </div>
+            <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
     </footer>
 
