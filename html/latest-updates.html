@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latest-updates</title>
+    <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    <div id="header"></div>
+    <div id="mySlider"></div>
+
+    <main class="latest-updates-page">
+        <section class="latest-updates-hero">
+            <h1>OUR LATEST UPDATES</h1>
+            <p>Our Latest Projects</p>
+        </section>
+
+
+
+        <section class="latest-updates-grid">
+            <div class="project-card" data-location="New-Cairo" data-date="2025">
+                <img src="../assets/pic/duplex5.jpg" alt="Premium Fifth Settlement Duplex">
+                <div class="project-info">
+                    <h3>Premium Fifth Settlement Duplex</h3>
+                    <p>New Cairo, Egypt | 2025</p>
+                </div>
+            </div>
+            <div class="project-card" data-location="cairo" data-date="2024">
+                <img src="../assets/pic/land.PNG" alt="Landscape">
+                <div class="project-info">
+                    <h3>Luxury Landscape in Promenade Compound, Fifth Settlement</h3>
+                    <p>Cairo, Egypt | 2024</p>
+                </div>
+            </div>
+            <div class="project-card" data-location="New-Cairo" data-date="2024">
+                <img src="../assets/pic/Promenade1.PNG" alt="Promenade">
+                <div class="project-info">
+                    <h3>Luxury Apartment in Promenade Compound, Fifth Settlement</h3>
+                    <p>New Cairo, Egypt | 2024</p>
+                </div>
+            </div>
+            <div class="project-card" data-location="New-Cairo" data-date="2023">
+                <img src="../assets/pic/Diplomats1.png" alt="Diplomats Compound">
+                <div class="project-info">
+                    <h3>Premium Duplex in Diplomats Compound, Fifth Settlement</h3>
+                    <p>Cairo, Egypt | 2023</p>
+                </div>
+            </div>
+            <div class="project-card" data-location="Qattamiya" data-date="2024">
+                <img src="../assets/pic/Katameya.png" alt="Egypt's Monorail">
+                <div class="project-info">
+                    <h3>Premium Landscape Qattamiya Garden</h3>
+                    <p>Cairo, Egypt | 2024</p>
+                </div>
+            </div>
+            <div class="project-card" data-location="cairo" data-date="2024">
+                <img src="../assets/pic/Living.png" alt="Outdoor Living">
+                <div class="project-info">
+                    <h3>Outdoor Living - First Settlement</h3>
+                    <p>Cairo, Egypt | 2024</p>
+                </div>
+            </div>  
+        </section>
+    </main>
+
+
+    <script>
+        fetch("../html/header.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                const script = document.createElement("script");
+                script.src = "../js/header.js";
+                document.body.appendChild(script);
+            });
+        
+    </script>
+    
+    <footer>
+        <div class="footer-content">
+
+            <div class="social">
+                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
+                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
+                <a href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+            </div>
+            <p>© 2025 Heaven Life. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        fetch('../html/slider.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('mySlider').innerHTML = data;
+                const script = document.createElement('script');
+                script.src = '../js/slider.js';
+                script.onload = () => {
+                    initSlider();
+                };
+                document.body.appendChild(script);
+            });
+    </script>
+    <script src="../js/latest-updates.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

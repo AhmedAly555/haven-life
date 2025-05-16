@@ -21,28 +21,6 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("header").innerHTML = data;
-
-        const hamburger = document.getElementById("hamburger");
-        const navList = document.querySelector("nav ul");
-
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          navList.classList.toggle("show");
-
-          const nav = document.querySelector("nav");
-          if (navList.classList.contains("show")) {
-            nav.style.display = "block";
-          } else {
-            nav.style.display = "none";
-          }
-        });
-      });
-    </script>
-    <script>
-    fetch("../html/header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
         const script = document.createElement("script");
         script.src = "../js/header.js";
         document.body.appendChild(script);
@@ -238,7 +216,6 @@
     <script src="../js/cards-animation.js"></script>
     <script src="../js/gallery.js"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/header.js"></script>
 
 </body>
 

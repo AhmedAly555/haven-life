@@ -30,7 +30,10 @@ header {
     z-index: 10;
     background: transparent;
 }
-
+#nav-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
 header .logo img {
     height: 130px;
 }
@@ -96,6 +99,7 @@ header nav a:hover::after {
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -174,7 +178,7 @@ header nav a:hover::after {
 
 footer {
     background-color: transparent;
-    color: #003366a8;
+    color: #1b213aa8;
     padding: 20px 20px;
     box-shadow:transparent;
 }
