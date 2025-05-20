@@ -171,9 +171,7 @@ header nav a:hover::after {
         height: auto;
     }
 
-    .popup {
-        display: none !important;
-    }
+
 }
 
 footer {
