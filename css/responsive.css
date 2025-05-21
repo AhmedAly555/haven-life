@@ -1,0 +1,160 @@
+/* إعدادات عامة */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+
+/* كونتينر رئيسي لكل السيكشنز */
+
+.container,
+.overview-container,
+.news-container,
+.projects-container,
+.gallery,
+.footer-content,
+.about-container,
+.mission-container,
+.vision-container,
+.contact-container,
+.services-container,
+.contact-info,
+.contact-form,
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* صور ريسبونسيف */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* السيكشنز الخاصة بكل صفحة */
+
+.overview-text,
+.overview-images,
+.about-text,
+.about-images,
+.mission-text,
+.mission-img,
+.vision-text,
+.vision-img,
+.contact-info,
+.contact-form {
+    flex: 1 1 100%;
+}
+
+.overview-img,
+.about-img {
+    width: 100%;
+}
+
+
+/* كروت الأخبار، المشاريع، والخدمات */
+
+.news-card,
+.projects-card,
+.service-card {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+
+/* معرض الصور */
+
+.gallery img {
+    flex: 1 1 100%;
+}
+
+
+/* الفوتر */
+
+.footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.social a img {
+    width: 30px;
+}
+
+
+/* النافبار (من header.html) */
+
+
+/* النافبار */
+
+.nav-list {
+    display: none;
+}
+
+.nav-list.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        padding: 0;
+    }
+    .nav-list.active {
+        position: static;
+        background: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .news-card,
+    .projects-card,
+    .service-card {
+        flex: 1 1 calc(33.33% - 10px);
+    }
+    .gallery img {
+        flex: 1 1 calc(33.33% - 10px);
+    }
+}

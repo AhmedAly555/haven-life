@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/overview.css" />
     <link rel="stylesheet" href="../css/projects-gallery.css" />
     <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="stylesheet" href="../css/responsive.css">
 
 
 </head>
@@ -17,29 +18,29 @@
 <body>
     <div id="header"></div>
     <script>
-    fetch("../html/header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header").innerHTML = data;
-        const script = document.createElement("script");
-        script.src = "../js/header.js";
-        document.body.appendChild(script);
-      });
+        fetch("../html/header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                const script = document.createElement("script");
+                script.src = "../js/header.js";
+                document.body.appendChild(script);
+            });
     </script>
     <div id="mySlider"></div>
     <script>
-    fetch('../html/slider.html')
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById('mySlider').innerHTML = data;
-        const script = document.createElement('script');
-        script.src = '../js/slider.js';
-        script.onload = () => {
-            initSlider();
-        };
-        document.body.appendChild(script);
-        });
-  </script>
+        fetch('../html/slider.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('mySlider').innerHTML = data;
+                const script = document.createElement('script');
+                script.src = '../js/slider.js';
+                script.onload = () => {
+                    initSlider();
+                };
+                document.body.appendChild(script);
+            });
+    </script>
     <section class="about-overview">
         <div class="overview-container">
             <div class="overview-text">
@@ -197,7 +198,7 @@
 
     <footer>
         <div class="footer-content">
-            
+
             <div class="social">
                 <a href="#"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
                 <a href="#"><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
