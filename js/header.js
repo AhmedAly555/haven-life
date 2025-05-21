@@ -1,3 +1,15 @@
+// التحكم في فتح/قفل النافبار في وضع الموبايل
+document.querySelector('.nav-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-list').classList.toggle('active');
+});
+
+// إغلاق القايمة لما تضغط على أي لينك في النافبار
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-list').classList.remove('active');
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById("nav-links");
     const currentPath = window.location.pathname;
