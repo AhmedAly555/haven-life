@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+.text-content h4,
+.text-content p,
+.text-content .button {
+    margin-bottom: 15px;
+}
 
 .section {
     display: flex;
@@ -20,6 +25,7 @@ body {
     margin-bottom: 40px;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    gap: 200px;
 }
 
 .section:nth-child(2) {
@@ -30,7 +36,9 @@ body {
     flex: 1;
     padding: 20px;
 }
-
+.space {
+    height: 100px;
+}
 .text-content h1 {
     color: #1A5276;
     /* Darkened blue */
@@ -63,7 +71,7 @@ body {
 }
 
 .locations a {
-    margin: 0 15px;
+    margin: 0 0px;
     color: #F5A623;
     /* Changed to yellow */
     text-decoration: none;

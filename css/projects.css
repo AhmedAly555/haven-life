@@ -7,10 +7,12 @@
 }
 
 .projects-hero,
-.latest-updates-hero {
+.latest-updates-hero,
+.services-hero,
+.about-us-hero {
     text-align: center;
     padding: 60px 0;
-    background-color: #f8f8f8;
+    background-color: #deedf5c4;
     margin-bottom: 40px;
     animation: fadeIn 1s ease-out;
 }
@@ -28,14 +30,17 @@
 }
 
 .projects-hero h1,
-.latest-updates-hero h1 {
+.latest-updates-hero h1,
+.services-hero h1,
+.about-us-hero h1 {
     font-size: 3rem;
-    color: #333;
+    color: #7f8c8d;
     margin-bottom: 10px;
 }
 
 .projects-hero p,
-.latest-updates-hero p {
+.latest-updates-hero p,
+.services-hero p {
     font-size: 1.5rem;
     color: #666;
 }

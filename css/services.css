@@ -11,11 +11,10 @@ body {
     /* padding: 40px 20px; */
 }
 
-h1 {
+.services-hero {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 50px;
-    font-size: 36px;
-    color: #1a1a1a;
 }
 
 .services-container {
