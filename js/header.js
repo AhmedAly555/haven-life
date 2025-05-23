@@ -1,47 +1,47 @@
-// التحكم في فتح/قفل النافبار في وضع الموبايل
-document.querySelector('.nav-toggle').addEventListener('click', () => {
-    document.querySelector('.nav-list').classList.toggle('active');
-});
-
-// إغلاق القايمة لما تضغط على أي لينك في النافبار
-document.querySelectorAll('.nav-list a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-list').classList.remove('active');
-    });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.getElementById("nav-links");
-    const currentPath = window.location.pathname;
+    const currentPage = window.location.pathname.split("/").pop();
 
-    // تبسيط الشرط للتحقق إذا كنا في صفحة غير الرئيسية
-    if (currentPath !== "home.html" && currentPath !== "/") {
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        const linkHref = link.getAttribute("href");
+        const linkPage = linkHref.split("/").pop();
+
+        if (linkPage === currentPage || (currentPage === "" && linkPage === "home.html")) {
+            link.classList.add('active');
+        }
+    });
+
+    // إضافة رابط Home إن لم يكن موجود
+    const navLinks = document.getElementById("nav-links");
+    const hasHome = Array.from(navLinks.children).some(li =>
+        li.querySelector("a")?.getAttribute("href")?.includes("home.html")
+    );
+
+    if (currentPage !== "home.html" && currentPage !== "" && !hasHome) {
         const homeLink = document.createElement("li");
         homeLink.innerHTML = '<a href="/html/home.html">Home</a>';
         navLinks.insertBefore(homeLink, navLinks.firstChild);
     }
 
+    // القائمة الجانبية
     const hamburger = document.getElementById("hamburger");
     const navList = document.querySelector("nav ul");
+    const nav = document.querySelector("nav");
 
     if (hamburger && navList) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navList.classList.toggle("show");
 
-            const nav = document.querySelector("nav");
-            if (navList.classList.contains("show")) {
-                nav.style.display = "block";
-            } else {
-                nav.style.display = "none";
-            }
+            nav.style.display = navList.classList.contains("show") ? "block" : "none";
         });
     }
-});
 
-document.querySelectorAll('#nav-links a').forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add('active');
-        link.addEventListener('click', (e) => e.preventDefault());
-    }
+    // إغلاق القائمة عند الضغط على رابط
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('show');
+            hamburger.classList.remove('active');
+            nav.style.display = "none";
+        });
+    });
 });

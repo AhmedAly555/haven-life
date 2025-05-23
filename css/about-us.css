@@ -26,13 +26,20 @@ body {
     transform: translateY(50px);
     transition: all 1s ease;
 }
-
-
+.spaceh {
+    height: 50px;
+}
+.about-us-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
 /* Image styling */
 
 .container img {
     width: 45%;
     max-width: 400px;
+    max-height: 500px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
