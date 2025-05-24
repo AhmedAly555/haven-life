@@ -1,34 +1,65 @@
 /* Space Between Section latest-news And projects */
-.latest-news{margin-bottom: 50px;}
 
-.latest-news , .projects {
-    padding: 80px 20px; /* position of all data in container */
-    background-color: #F2F5F8; /* background-color of container */
+.latest-news {
+    margin-bottom: 50px;
 }
 
-/* design of container for each News and Projects */
-.news-container , .projects-container {
+.latest-news,
+.projects {
+    padding: 80px 20px;
+    /* position of all data in container */
+    background-color: #F2F5F8;
+    /* background-color of container */
+}
+
+
+/* design of title container for each News and Projects */
+
+.section {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    /* عشان Our Work تبقى على الشمال */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* design of container for each News and Projects */
+
+.news-container,
+.projects-container {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 0px;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
 }
 
+
 /* All Cards style in each container of News and Projects */
-.news-cards, .projects-cards {
+
+.news-cards,
+.projects-cards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 20px;
     padding-bottom: 20px;
+    overflow-y: hidden
 }
 
+
 /* Card Design */
-.news-card , .projects-card {
+
+.news-card,
+.projects-card {
     background: white;
     border-radius: 12px;
     min-width: 250px;
@@ -42,54 +73,79 @@
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+
 /* Cards effect */
-.projects-card:hover, .news-card:hover {
+
+.projects-card:hover,
+.news-card:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.projects-card.visible, .news-card.visible{
+
+.projects-card.visible,
+.news-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
-.projects-card img, .news-card img {
+
+.projects-card img,
+.news-card img {
     transition: transform 0.5s ease;
 }
-.projects-card:hover img, .news-card:hover img{
+
+.projects-card:hover img,
+.news-card:hover img {
     transform: scale(1.05);
 }
 
+
 /* Img Design In Card*/
-.news-card img , .projects-card img {
+
+.news-card img,
+.projects-card img {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
+
 /* Date Design In Card*/
-.news-card .date , .projects-card .date{
+
+.news-card .date,
+.projects-card .date {
     font-size: 14px;
     color: #666;
     margin: 10px 15px 0;
 }
 
+
 /* Description Text In Card*/
-.news-card h3, .projects-card h3 {
+
+.news-card h3,
+.projects-card h3 {
     font-size: 16px;
     color: #003366;
     margin: 5px 15px 15px;
 }
 
-/* Container Fotter */ 
-.news-footer, .projects-footer {
+
+/* Container Fotter */
+
+.news-footer,
+.projects-footer {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
 /* Button Design */
-.explore-button,.news-btn,.projects-btn {
+
+.explore-button,
+.news-btn,
+.projects-btn {
     display: inline-block;
     margin-top: 25px;
     padding: 10px 20px;
@@ -100,14 +156,22 @@
     position: relative;
     transition: all 0.3s ease;
 }
+
+
 /* Button effect color */
-.explore-button:hover,.news-btn:hover,.projects-btn:hover {
+
+.explore-button:hover,
+.news-btn:hover,
+.projects-btn:hover {
     background-color: #f26522;
     color: #fff;
 }
 
+
 /* Scroll Function In Container */
-.scrollable-news, .scrollable-projects {
+
+.scrollable-news,
+.scrollable-projects {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -118,17 +182,26 @@
     -ms-overflow-style: none;
     user-select: none;
 }
-.scrollable-news img , .scrollable-projects img{
-    -webkit-user-drag: none; 
-    pointer-events: none; 
+
+.scrollable-news img,
+.scrollable-projects img {
+    -webkit-user-drag: none;
+    pointer-events: none;
 }
-.scrollable-news::-webkit-scrollbar , .scrollable-projects::-webkit-scrollbar {
+
+.scrollable-news::-webkit-scrollbar,
+.scrollable-projects::-webkit-scrollbar {
     display: none;
 }
-.scrollable-projects,.scrollable-news {
+
+.scrollable-projects,
+.scrollable-news {
     will-change: transform;
 }
+
+
 /* Scroll Function Support For Mobile*/
+
 @media (prefers-reduced-motion: reduce) {
     .projects-card {
         transition: none !important;

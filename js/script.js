@@ -11,4 +11,3 @@ hamburger.addEventListener("click", () => {
         nav.style.display = "none";
     }
 });
-
