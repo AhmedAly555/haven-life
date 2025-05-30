@@ -1,0 +1,167 @@
+/* Remove underline from project-card links */
+
+.project-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Make project-card appear clickable on hover */
+
+.project-card:hover {
+    cursor: pointer;
+}
+
+
+/* Modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Make gallery images clickable */
+
+.gallery-img {
+    cursor: pointer;
+}
+
+
+/*-------------------------------------------------------------------*/
+
+
+/*top*/
+
+.project-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+#main-image {
+    width: 900px;
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    will-change: transform, opacity;
+    margin-bottom: 30px;
+}
+
+
+/*mid*/
+
+.project-details-section {
+    background-color: #f2f6fa;
+    padding: 60px 40px;
+}
+
+.project-details-section h2 {
+    color: #f26722;
+    /* لون برتقالي */
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+}
+
+.project-details-section h2::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #f26722;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#project-title {
+    font-size: 36px;
+    color: #003a70;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#project-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    text-align: left;
+    max-width: 1000px;
+}
+
+
+/*end*/
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.gallery-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+
+/*Animation*/
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
