@@ -1,11 +1,11 @@
 function initStaggeredAnimation(selectors, options = {}) {
     const {
-        delay = 100, 
+        delay = 100,
         threshold = 0.1,
         rootMargin = '0px 0px -50px 0px'
     } = options;
-    
-    const elements = selectors.flatMap(selector => 
+
+    const elements = selectors.flatMap(selector =>
         [...document.querySelectorAll(selector)]
     );
 

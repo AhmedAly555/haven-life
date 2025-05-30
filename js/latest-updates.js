@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const locationFilter = document.getElementById("location-filter");
     const dateFilter = document.getElementById("date-filter");
     const sectorFilter = document.getElementById("sector-filter");

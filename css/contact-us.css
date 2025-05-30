@@ -12,10 +12,8 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-.text-content h4,
-.text-content p,
-.text-content .button {
-    margin-bottom: 15px;
+.button {
+    margin-bottom: 5px;
 }
 
 .section {
@@ -35,9 +33,6 @@ body {
 .text-content {
     flex: 1;
     padding: 20px;
-}
-.space {
-    height: 100px;
 }
 .text-content h1 {
     color: #1A5276;
@@ -72,7 +67,7 @@ body {
 
 .locations a {
     margin: 0 0px;
-    color: #F5A623;
+    color: #f26522;
     /* Changed to yellow */
     text-decoration: none;
     font-weight: bold;
@@ -80,27 +75,27 @@ body {
 
 .button {
     display: inline-block;
+    margin-top: 25px;
     padding: 10px 20px;
-    background-color: #F5A623;
-    /* Changed to yellow */
-    color: white;
+    border: 2px solid #f26422b9;
+    color: #f26422b9;
     text-decoration: none;
-    border-radius: 5px;
+    position: relative;
     transition: all 0.3s ease;
-    animation: pulse 2s infinite;
 }
 
 .button:hover {
-    background-color: #d4891e;
+    background-color: #f26422b9;
     /* Slightly darker yellow on hover */
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 10px #F5A623;
+    box-shadow: 0 0 10px #f26422b9;
+    color: #fff;
 }
 
 .divider {
     width: 50px;
     height: 2px;
-    background-color: #F5A623;
+    background-color: #f26522;
     /* Changed to yellow */
     margin: 10px 0;
     animation: stretch 1.5s infinite;
