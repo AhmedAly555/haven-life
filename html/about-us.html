@@ -7,16 +7,11 @@
     <title>About Us</title>
 
     <link rel="stylesheet" href="../css/about-us.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/services.css">
-    <link rel="stylesheet" href="../css/slider.css" />
     <link rel="stylesheet" href="../css/contact-us.css" />
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/responsive.css">
-
-
-
-
 </head>
 
 <body>
@@ -33,50 +28,43 @@
     </script>
 
 
-    <div id="mySlider"></div>
-    <script>
-        fetch('../html/slider.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('mySlider').innerHTML = data;
-                const script = document.createElement('script');
-                script.src = '../js/slider.js';
-                script.onload = () => {
-                    initSlider();
-                };
-                document.body.appendChild(script);
-            });
-    </script>
-
-
     <div class="spaceh"></div>
 
     <section class="about-us-hero">
-            <h1>ABOUT US</h1>
+        <h1>ABOUT US</h1>
     </section>
 
     <audio id="bgMusic" autoplay loop>
-    <source src="your-music-file.mp3" type="audio/mp3">
-  </audio>
+        <source src="your-music-file.mp3" type="audio/mp3">
+    </audio>
 
     <section class="about-section">
         <div class="container left-slide">
             <img src="../assets/pic/poolB.png" alt="Building">
             <div class="text-box">
-                <h2>History of <span>HAVEN<span class="highlight">LIFE</span></span>
+                <h2>History of <span class="highlight">HEAVEN LIFE</span></span>
                 </h2>
-                <p>HAVEN LIFE for Constructions, Decorations, and Exports was founded with a vision to redefine excellence in the construction and interior design industry. Over the years, we have specialized in real estate development, building, and the
-                    latest 3D finishing techniques. Our expertise extends to the design and renovation of commercial centers, hospitals, and a wide range of supply services. With a commitment to quality, innovation, and precision, HAVENLIFE has become
-                    a trusted name in the field, delivering projects that combine aesthetics, functionality, and cutting-edge technology.</p>
+                <p id="overview-description">HEAVEN LIFE for Constructions, Decorations, and Exports was founded with a
+                    vision to redefine excellence in the construction and interior design industry. Over the years, we
+                    have specialized in real estate development, building, and the
+                    latest 3D finishing techniques. Our expertise extends to the design and renovation of commercial
+                    centers, hospitals, and a wide range of supply services. With a commitment to quality, innovation,
+                    and precision, HEAVENLIFE has become
+                    a trusted name in the field, delivering projects that combine aesthetics, functionality, and
+                    cutting-edge technology.</p>
                 <button>Read More</button>
             </div>
         </div>
 
         <div class="container right-slide">
             <div class="text-box">
-                <h2>Why <span>Choose us?</span></h2>
-                <p>At HAVEN LIFE, we take pride in our attention to detail, speed of execution, and elegant finishes. Our team is dedicated to providing top-tier services at competitive prices, making us a standout choice in the market. Whether it's a large-scale
-                    construction project or a high-end interior makeover, we deliver with unmatched efficiency and craftsmanship. When you choose HAVENLIFE, you choose excellence, affordability, and results that speak for themselves.</p>
+                <h2>Why <span><span class="highlight">Choose us..?</span></h2>
+                <p id="overview-description2">At HEAVEN LIFE, we take pride in our attention to detail, speed of
+                    execution, and elegant finishes. Our team is dedicated to providing top-tier services at competitive
+                    prices, making us a standout choice in the market. Whether it's a large-scale
+                    construction project or a high-end interior makeover, we deliver with unmatched efficiency and
+                    craftsmanship. When you choose HEAVENLIFE, you choose excellence, affordability, and results that
+                    speak for themselves.</p>
                 <button>Read More</button>
             </div>
             <img src="../assets/pic/Katameya.png" alt="Building">
@@ -87,9 +75,15 @@
         <div class="footer-content">
 
             <div class="social">
-                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
-                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
-                <a href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png"
+                        alt="فيسبوك" /></a>
+                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img
+                        src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
+                <a
+                    href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                        src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://wa.me/201000194883" target="_blank"><img src="../assets/pic/Whatsapp.png" alt="واتساب"
+                        style="width:45px;height:45px;"></a>
             </div>
             <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
@@ -97,6 +91,21 @@
 
     <script src="../js/about-us.js"></script>
     <script src="../js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+        new TypeIt("#overview-description", {
+            speed: 50,
+            waitUntilVisible: true,
+            cursor: false
+        }).go();
+    </script>
+    <script>
+        new TypeIt("#overview-description2", {
+            speed: 50,
+            waitUntilVisible: true,
+            cursor: false
+        }).go();
+    </script>
 </body>
 
 </html>

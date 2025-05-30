@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const projectCards = document.querySelectorAll('.project-card');
-    
+
     projectCards.forEach((card, index) => {
         card.style.setProperty('--order', index);
     });
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         grid.addEventListener('mousemove', (e) => {
-            if(!isDown) return;
+            if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - grid.offsetLeft;
             const walk = (x - startX) * 2;
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         grid.addEventListener('touchmove', (e) => {
-            if(!isDown) return;
+            if (!isDown) return;
             const x = e.touches[0].pageX - grid.offsetLeft;
             const walk = (x - startX) * 2;
             grid.scrollLeft = scrollLeft - walk;

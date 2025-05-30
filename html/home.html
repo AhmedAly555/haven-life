@@ -11,20 +11,34 @@
     <link rel="stylesheet" href="../css/projects-gallery.css" />
     <link rel="stylesheet" href="../css/slider.css" />
     <link rel="stylesheet" href="../css/gallery.css" />
+    <link rel="stylesheet" href="../css/services-section.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 
 <body>
-    <div id="header"></div>
-    <script>
-        fetch("../html/header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/header.js";
-                document.body.appendChild(script);
-            });
-    </script>
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <div id="mySlider"></div>
     <script>
         fetch('../html/slider.html')
@@ -42,9 +56,9 @@
     <section class="about-overview">
         <div class="overview-container">
             <div class="overview-text">
-                <h5 class="section-subtitle">WHO WE ARE</h5>
-                <h2 class="section-title">At a Glance</h2>
-                <p class="section-description">
+                <h5 class="section-subtitle" data-aos="zoom-in" data-aos-duration="1000">WHO WE ARE</h5>
+                <h2 class="section-title" data-aos="flip-up" data-aos-duration="1000">At a Glance</h2>
+                <p id="overview-description" class="section-description" data-aos-id="typeit-trigger">
                     Heaven Life is a leading company in construction and interior design, primarily focused on building,
                     real estate development, and delivering the latest 3D decoration and finishing technologies. We
                     specialize in design, renovation, and high-quality supplies.
@@ -55,15 +69,18 @@
             </div>
 
             <div class="overview-images">
-                <img src="../assets/pic/poolB.png" alt="Building" class="overview-img">
-                <img src="../assets/pic/Katameya.png" alt="Worker" class="overview-img">
+                <img src="../assets/pic/poolB.png" class="overview-img img-one" alt="Building" />
+                <img src="../assets/pic/Katameya.png" class="overview-img img-two" alt="Worker" />
             </div>
         </div>
     </section>
     <section class="latest-news">
+        <div class="background-blur"></div>
+        <div class="section">
+            <p class="section-subtitle" data-aos="zoom-in" data-aos-duration="1000">LATEST NEWS</p>
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="1000">Our Latest Updates</h2>
+        </div>
         <div class="news-container">
-            <p class="section-subtitle">LATEST NEWS</p>
-            <h2 class="section-title">Our Latest Updates</h2>
             <div class="news-cards scrollable-news" id="scrollableNews">
                 <!-- الكروت -->
                 <div class="news-card">
@@ -116,9 +133,12 @@
         </div>
     </section>
     <section class="projects">
+        <div class="section">
+            <p class="section-subtitle" data-aos="zoom-in" data-aos-duration="1000">PROJECTS</p>
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="1000">Our Work</h2>
+        </div>
         <div class="projects-container">
-            <p class="section-subtitle">PROJECTS</p>
-            <h2 class="section-title">Our Work</h2>
+
             <div class="projects-cards scrollable-projects" id="scrollableProjects">
                 <!-- الكروت -->
                 <div class="news-card">
@@ -165,38 +185,86 @@
             </div>
         </div>
     </section>
-
-    <div id="gallery-container"></div>
+    <!--  Services Section  -->
+    <section class="what-we-do">
+        <div class="section">
+            <p class="section-subtitle" data-aos="zoom-in" data-aos-duration="1000">WHAT WE DO</p>
+            <h2 class="section-title" data-aos="flip-up" data-aos-duration="1000">Our Services</h2>
+        </div>
+        <div class="services-container">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Real Estate Investments</h3>
+                <p>Premium property development and strategic investment opportunities.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h3>Luxury Facilities Management</h3>
+                <p>Comprehensive management for high-end residential and commercial properties.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <h3>Design & Construction</h3>
+                <p>Bespoke architectural design and premium construction services.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <h3>Premium Materials</h3>
+                <p>High-quality building materials and finishes for luxury projects.</p>
+            </div>
+        </div>
+        <div class="services-footer">
+            <a href="../html/services.html" class="explore-button">Explore</a>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-content">
 
+
+
             <div class="social">
-                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
-                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
-                <a href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png"
+                        alt="فيسبوك" /></a>
+                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img
+                        src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
+                <a
+                    href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                        src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://wa.me/201000194883" target="_blank"><img src="../assets/pic/Whatsapp.png" alt="واتساب"
+                        style="width:45px;height:45px;"></a>
+
             </div>
             <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        fetch("../html/gallery.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("gallery-container").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/gallery.js";
-                document.body.appendChild(script);
-            });
-    </script>
+
 
 
 
     <script src="../js/script.js"></script>
     <script src="../js/cards-animation.js"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../js/gallery.js"></script>
     <script src="../js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+
+        document.addEventListener("aos:in:typeit-trigger", function () {
+            new TypeIt("#overview-description", {
+                speed: 50,
+                waitUntilVisible: true,
+                cursor: false
+            }).go();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+    <script>
+        new TypeIt("#overview-description", {
+            speed: 50,
+            waitUntilVisible: true,
+            cursor: false
+        }).go();
+    </script>
+
 
 
 </body>

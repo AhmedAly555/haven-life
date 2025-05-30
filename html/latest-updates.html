@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>latest-updates</title>
     <link rel="stylesheet" href="../css/slider.css" />
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/projects.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about-us.css">
     <link rel="stylesheet" href="../css/responsive.css">
 
 
@@ -15,11 +16,10 @@
 
 <body>
     <div id="header"></div>
-    <div id="mySlider"></div>
-
+    <div class="spaceh"></div>
     <main class="latest-updates-page">
         <section class="latest-updates-hero">
-            <h1>OUR LATEST UPDATES</h1>
+            <h1 class="animated-word">LATEST UPDATES</h1>
             <p>Our Latest Projects</p>
         </section>
 
@@ -87,27 +87,19 @@
         <div class="footer-content">
 
             <div class="social">
-                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك" /></a>
-                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
-                <a href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png"
+                        alt="فيسبوك" /></a>
+                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img
+                        src="../assets/pic/Instagram.png" alt="انستجرام" /></a>
+                <a
+                    href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                        src="../assets/pic/LinkedIn.png" alt="لينكدإن" /></a>
+                <a href="https://wa.me/201000194883" target="_blank"><img src="../assets/pic/Whatsapp.png" alt="واتساب"
+                        style="width:45px;height:45px;"></a>
             </div>
             <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        fetch('../html/slider.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('mySlider').innerHTML = data;
-                const script = document.createElement('script');
-                script.src = '../js/slider.js';
-                script.onload = () => {
-                    initSlider();
-                };
-                document.body.appendChild(script);
-            });
-    </script>
     <script src="../js/latest-updates.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/header.js"></script>
