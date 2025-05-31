@@ -10,17 +10,55 @@
 .latest-updates-hero,
 .services-hero,
 .about-us-hero {
+    position: relative;
     text-align: center;
     padding: 60px 0;
-    margin-top: 150px;
+    margin-top: 0px;
     margin-bottom: 40px;
     animation: fadeIn 1s ease-out;
     background-color: transparent;
-    background-image: url('/assets/pic/B1.jpg');
+    overflow: hidden;
+    /* عشان الـ blur يفضل جوة */
+}
+.services-hero::before {
+    background-image: url('/assets/pic/serviceBackground.jpg');
+}
+.about-us-hero::before {
+    background-image: url('/assets/pic/aboutus.jpg');
+}
+.latest-updates-hero::before {
+    background-image: url('/assets/pic/latestproject.jpg');
+}
+.projects-hero::before {
+    background-image: url('/assets/pic/projects.jpg');
+}
+.projects-hero::before,
+.latest-updates-hero::before,
+.services-hero::before,
+.about-us-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: blur(3.5px);
+    /* البلور */
+    z-index: 1;
 }
+
+
+.projects-hero>*,
+.latest-updates-hero>*,
+.services-hero>*,
+.about-us-hero>* {
+    position: relative;
+    z-index: 2;
+}
+
 
 @keyframes fadeIn {
     from {
@@ -48,6 +86,82 @@
 .services-hero p {
     font-size: 1.5rem;
     color: white;
+}
+
+.section-header {
+    text-align: left;
+    position: relative;
+    padding-left: 100px;
+}
+
+.section-header h1 {
+    display: inline-block;
+    position: relative;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    padding-right: 20px;
+}
+
+/* UnderLine*/
+.services-hero h1::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 125px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+.about-us-hero h1::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 145px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+.latest-updates-hero h1::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 240px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+.projects-hero h1::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 170px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    transform: translateY(-50%);
+}
+.section-header p {
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
 }
 
 .projects-grid,
@@ -123,27 +237,27 @@
 .project-info h3,
 .latest-update-info h3 {
     margin: 0 0 10px 0;
-    color: #666;
+    color: #46688a;
     font-size: 1.3rem;
     transition: color 0.3s ease;
 }
 
 .project-card:hover .project-info h3,
 .latest-update-card:hover .latest-update-info h3 {
-    color: #222;
+    color: #46688a;
 }
 
 .project-info p,
 .latest-update-info p {
     margin: 0;
-    color: #666;
+    color: #46688ac2;
     font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 .project-card:hover .project-info p,
 .latest-update-card:hover .latest-update-info p {
-    color: #444;
+    color: #46688a;
 }
 
 .project-card::after,

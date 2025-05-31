@@ -1,71 +1,201 @@
 .what-we-do {
-    padding: 80px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.section-subtitle {
+    padding: 80px 20px;
     position: relative;
-    display: inline-block;
-    inline-size: 500px;
-    color: #f26522;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #f26522;
-    padding-bottom: 2px;
-    text-transform: uppercase;
-    text-align: left;
+    overflow: hidden;
+    text-align: center;
+    background: #f5f5f5; /* خلفية احتياطية */
 }
 
-.service-card {
-    background: white;
+.services-wrapper {
+    position: relative;
+    margin-left: 350px;
+    max-width: 1300px;
+    height: 700px;
+    display: flex;
+    align-items: center;
     border-radius: 10px;
-    padding: 30px;
-    width: 250px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+.dynamic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    opacity: 0;
+    filter: brightness(0.5);
+    /**/
+    transform: scale(1.05);
+    transition: 
+        opacity 0.7s ease-out,
+        transform 1.2s ease-out;
+    will-change: opacity, transform;
 }
 
-.service-card h3 {
-    color: #1b213a;
-    font-size: 1.2em;
-    margin-bottom: 15px;
+
+
+
+
+
+
+/* تأثير تموج عند التغيير */
+@keyframes ripple {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.02); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
-.service-card p {
-    color: #666;
-    font-size: 0.9em;
-    line-height: 1.5;
-
+.dynamic-background.fade-in {
+    animation: ripple 1.5s ease-out;
 }
 
-.services-footer {
-    margin-top: 40px;
+/* تأثير طبقات متعددة */
+.dynamic-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+.dynamic-background.fade-in::before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* تأثير إضافي للخدمة عند hover */
+.service-item:hover h3 {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+.dynamic-background.active {
+    opacity: 1;transform: scale(1);
+}
+
+
+
+.services-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 0 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-item {
+    color: white;
+    text-decoration: none;
+    padding: 20px 25px;
+    border-left: 3px solid transparent;
+    transition: all 0.4s ease;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+.service-item.wide-service {
+    width: 50%; /* أو أي قيمة أكبر */
+    margin-right: 30px; /* مساحة إضافية */
+}
+
+.service-item:not(.wide-service) {
+    width: calc(25% - 20px); /* توزيع باقي المساحة */
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* لملء المساحة المتاحة */
+    position: relative;
+}
+.vertical-divider {
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    margin: 0 20px;
+    align-self: stretch; /* ليمتد بطول العنصر الأب */
+}
+.service-row:last-child .vertical-divider {
+    display: none;
+}
+
+
+
+
+.service-item h3 {
+    font-size: 1.3em;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    letter-spacing: 0.5px;transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);will-change: transform; /* تحسين أداء الحركة */
+    backface-visibility: hidden; /* منع التشويش */
+    display: inline-block; /* ضروري لتحريك النص فقط */
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.service-item:hover {
+    background:transparent;
+    transform: translateX(10px);
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
+    .what-we-do {
+        padding: 60px 15px;
     }
-    .service-card {
-        width: 80%;
+    
+    .services-wrapper {
+        height: auto;
+        min-height: 400px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .services-list {
+        padding: 30px 20px;
+        gap: 12px;
+    }
+    
+    .service-item {
+        padding: 15px 20px;
+    }
+    
+    .service-item h3 {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-wrapper {
+        margin: 20px auto;
+    }
+    
+    .service-item:hover {
+        transform: translateX(5px);
     }
 }
