@@ -60,10 +60,12 @@
 .section {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    text-align: start;
+    align-items: flex-start;
     /* عشان Our Work تبقى على الشمال */
     max-width: 1200px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: 350px;
 }
 
 
@@ -113,6 +115,7 @@
     transform: translateY(30px);
     will-change: opacity, transform;
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
 }
 
 
@@ -176,7 +179,8 @@
 
 .news-footer,
 .projects-footer {
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -189,7 +193,7 @@
 .news-btn,
 .projects-btn {
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 0px;
     padding: 10px 20px;
     border: 2px solid #f26522;
     color: #f26522;

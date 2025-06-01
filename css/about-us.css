@@ -17,7 +17,7 @@ body {
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     /* يمركز العناصر في النص */
     gap: 300px;
     /* مسافة بسيطة بين الصورة والنص */
@@ -26,11 +26,9 @@ body {
     transform: translateY(50px);
     transition: all 1s ease;
 }
-.spaceh {
-    height: 50px;
-}
+
 .about-us-hero {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -58,22 +56,22 @@ body {
 }
 
 .highlight {
-    color: orange;
+    color: #46688a;
 }
 
 .text-box button {
     margin-top: 20px;
     padding: 10px 20px;
-    border: 2px solid orange;
+    border: 2px solid #46688a;
     background: transparent;
-    color: orange;
+    color: #46688a;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .text-box button:hover {
-    background: orange;
+    background: #46688a;
     color: white;
 }
 

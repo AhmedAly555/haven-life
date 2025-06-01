@@ -7,12 +7,23 @@
 .overview-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    text-align: start;
+    align-items: flex-start;
     max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
+    margin-right: auto;
+    margin-left: 350px;
 }
+
+/*
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: 600px;
+*/
+
 
 .overview-text {
     flex: 1 1 500px;

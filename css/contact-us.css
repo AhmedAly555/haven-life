@@ -67,7 +67,7 @@ body {
 
 .locations a {
     margin: 0 0px;
-    color: #f26522;
+    color: #2c3e50;
     /* Changed to yellow */
     text-decoration: none;
     font-weight: bold;
@@ -77,25 +77,25 @@ body {
     display: inline-block;
     margin-top: 25px;
     padding: 10px 20px;
-    border: 2px solid #f26422b9;
-    color: #f26422b9;
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #f26422b9;
+    background-color: #2c3e50;
     /* Slightly darker yellow on hover */
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 10px #f26422b9;
+    box-shadow: 0 0 10px #2c3e50;
     color: #fff;
 }
 
 .divider {
     width: 50px;
     height: 2px;
-    background-color: #f26522;
+    background-color: #2c3e50;
     /* Changed to yellow */
     margin: 10px 0;
     animation: stretch 1.5s infinite;
