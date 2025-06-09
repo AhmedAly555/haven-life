@@ -3,7 +3,8 @@
     position: relative;
     overflow: hidden;
     text-align: center;
-    background: #f5f5f5; /* خلفية احتياطية */
+    background: #f5f5f5;
+    /* خلفية احتياطية */
 }
 
 .services-wrapper {
@@ -15,8 +16,9 @@
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.500);
 }
+
 
 .dynamic-background {
     position: absolute;
@@ -27,35 +29,33 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
     z-index: 0;
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 2.0s ease-in-out;
     opacity: 0;
-    filter: brightness(0.5);
-    /**/
-    transform: scale(1.05);
-    transition: 
-        opacity 0.7s ease-out,
-        transform 1.2s ease-out;
-    will-change: opacity, transform;
+    filter: brightness(0.4);
+    z-index: 0;
 }
 
-
-
-
-
-
-
-/* تأثير تموج عند التغيير */
-@keyframes ripple {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.02); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
+.bg-image.current {
+    opacity: 1;
+    z-index: 1;
 }
 
-.dynamic-background.fade-in {
-    animation: ripple 1.5s ease-out;
+.bg-image.next {
+    z-index: 2;
 }
 
-/* تأثير طبقات متعددة */
 .dynamic-background::before {
     content: '';
     position: absolute;
@@ -63,28 +63,88 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.3);
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.0s ease;
+    z-index: 1;
 }
 
-.dynamic-background.fade-in::before {
+.dynamic-background.active::before {
     opacity: 1;
 }
 
+.dynamic-background.active {
+    opacity: 1;
+    transform: scale(1);
+}
 
+.fade-in {
+    animation:
+        fadeIn 0.7s ease-out forwards,
+        subtleZoom 1.2s ease-out forwards;
+}
 
+.fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+}
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
 
+    to {
+        opacity: 1;
+    }
+}
 
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes subtleZoom {
+    0% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dynamic-background {
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
 
 /* تأثير إضافي للخدمة عند hover */
 .service-item:hover h3 {
     transform: translateY(-8px);
     transition: transform 0.3s ease;
 }
+
 .dynamic-background.active {
-    opacity: 1;transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -114,28 +174,37 @@
     margin-bottom: 0;
     flex-grow: 1;
 }
+
 .service-item.wide-service {
-    width: 50%; /* أو أي قيمة أكبر */
-    margin-right: 30px; /* مساحة إضافية */
+    width: 50%;
+    /* أو أي قيمة أكبر */
+    margin-right: 30px;
+    /* مساحة إضافية */
 }
 
 .service-item:not(.wide-service) {
-    width: calc(25% - 20px); /* توزيع باقي المساحة */
+    width: calc(25% - 20px);
+    /* توزيع باقي المساحة */
 }
 
 .service-row {
     display: flex;
     align-items: center;
-    flex-grow: 1; /* لملء المساحة المتاحة */
+    flex-grow: 1;
+    /* لملء المساحة المتاحة */
     position: relative;
+    cursor: pointer;
 }
+
 .vertical-divider {
     height: 100%;
     width: 2px;
     background-color: white;
     margin: 0 20px;
-    align-self: stretch; /* ليمتد بطول العنصر الأب */
+    align-self: stretch;
+    /* ليمتد بطول العنصر الأب */
 }
+
 .service-row:last-child .vertical-divider {
     display: none;
 }
@@ -149,15 +218,20 @@
     position: relative;
     z-index: 2;
     font-weight: 500;
-    letter-spacing: 0.5px;transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);will-change: transform; /* تحسين أداء الحركة */
-    backface-visibility: hidden; /* منع التشويش */
-    display: inline-block; /* ضروري لتحريك النص فقط */
+    letter-spacing: 0.5px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    /* تحسين أداء الحركة */
+    backface-visibility: hidden;
+    /* منع التشويش */
+    display: inline-block;
+    /* ضروري لتحريك النص فقط */
     user-select: none;
     -webkit-user-drag: none;
 }
 
 .service-item:hover {
-    background:transparent;
+    background: transparent;
     transform: translateX(10px);
 }
 
@@ -165,37 +239,63 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .what-we-do {
-        padding: 60px 15px;
-    }
-    
     .services-wrapper {
-        height: auto;
-        min-height: 400px;
+        margin: 0 auto;
         flex-direction: column;
-        justify-content: center;
+        align-items: start;
+        height: auto;
+        width: 100%;
+        padding: 20px;
     }
-    
-    .services-list {
-        padding: 30px 20px;
-        gap: 12px;
-    }
-    
-    .service-item {
-        padding: 15px 20px;
-    }
-    
-    .service-item h3 {
-        font-size: 1.1em;
-    }
-}
 
-@media (max-width: 480px) {
-    .services-wrapper {
-        margin: 20px auto;
+    /* نستخدم grid بدل flex */
+    .services-list {
+        display: flex !important;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        width: 100%;
+        align-items: stretch;
     }
-    
-    .service-item:hover {
-        transform: translateX(5px);
+
+    .what-we-do .section-subtitle {
+        font-size: 1.0em;
+        inline-size: 50%;
     }
+
+    .service-item {
+        width: 100% !important;
+        text-align: left;
+        /* أو center / right */
+        padding: 0;
+        /* نلغي أي padding افتراضي */
+        margin-bottom: 0px;
+    }
+
+    .service-item h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.1em;
+        padding: 20px 0px;
+    }
+    .service-item.wide-service {
+        margin-right: 0 !important;  
+        padding-left: 0 !important; 
+    }
+
+    .service-item.wide-service h3 {
+        padding-left: 0 !important;  
+    }
+
+    .vertical-divider {
+        display: none;
+    }
+
+    .bg-image,
+    .dynamic-background {
+        filter: brightness(0.3);
+    }
+
+
 }

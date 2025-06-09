@@ -12,7 +12,27 @@
 </head>
 
 <body>
-
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logoBlue.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <main class="project-details">
         <section class="project-hero">
             <img id="main-image" src="" alt="Project Main Image">
@@ -20,8 +40,46 @@
         </section>
         <section class="project-details-section fade-in">
             <h2 class="section-label">PROJECT DETAILS</h2>
+            <div class="project-meta-grid">
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Sector</h4>
+                        <p id="project-sector"></p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Year</h4>
+                        <p id="project-date"></p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Client</h4>
+                        <p id="project-client"></p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p id="project-location"></p>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Role</h4>
+                        <p id="project-role"></p>
+                    </div>
+                </div>
+            </div>
             <h1 id="project-title" class="fade-in"></h1>
             <p id="project-description" class="fade-in"></p>
+
         </section>
         <section class="project-gallery">
             <img id="gallery-image-1" src="" alt="Gallery Image 1" class="gallery-img" onclick="openModal(this.src)">
@@ -39,10 +97,15 @@
     <footer>
         <div class="footer-content">
             <div class="social">
-                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.png" alt="فيسبوك"></a>
-                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img src="../assets/pic/Instagram.png" alt="انستجرام"></a>
-                <a href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="../assets/pic/LinkedIn.png" alt="لينكدإن"></a>
-                <a href="https://wa.me/201000194883" target="_blank"><img src="../assets/pic/Whatsapp.png" alt="واتساب" style="width:45px;height:45px;"></a>
+                <a href="https://www.facebook.com/share/1CRtMhZJAm/"><img src="../assets/pic/Facebook.svg.webp"
+                        alt="فيسبوك" /></a>
+                <a href="https://www.instagram.com/heavenlife2539?igsh=MThiMnMwdzdyb3U5ag=="><img
+                        src="../assets/pic/Instagram.webp" alt="انستجرام" /></a>
+                <a href="https://wa.me/201000194883" target="_blank"><img src="../assets/pic/Whatsapp.webp" alt="واتساب"
+                        style="width:30px;height:30px;"></a>
+                <a
+                    href="https://www.linkedin.com/in/heaven-life-673292365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                        src="../assets/pic/LinkedIn.webp" alt="لينكدإن" style="width:33px;height:33px;" /></a>
             </div>
             <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
@@ -50,6 +113,7 @@
     <script src="../js/project-page-animation.js"></script>
     <script src="../js/template-of-project.js"></script>
     <script src="../js/project-details.js"></script>
+    <script src="../js/header.js"></script>
 
 
 </body>

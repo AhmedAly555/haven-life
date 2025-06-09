@@ -14,17 +14,6 @@
     margin-left: 350px;
 }
 
-/*
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: 600px;
-*/
-
-
 .overview-text {
     flex: 1 1 500px;
     max-width: 600px;
@@ -41,7 +30,7 @@
 }
 
 .overview-img {
-    width: 200px;
+    width: 250px;
     height: auto;
     min-height: 300px;
     border-radius: 0px;
@@ -52,25 +41,6 @@
 .img-two {
     margin-top: 150px;
     /* الصورة التانية نزلت لتحت */
-}
-
-@media (max-width: 768px) {
-
-    .img-one,
-    .img-two {
-        transform: translateY(0);
-
-        /* رجعهم طبيعيين في الموبايل */
-        .overview-images {
-            justify-content: center;
-        }
-
-        .overview-img1,
-        .overview-img2 {
-            width: 100%;
-            max-width: 300px;
-        }
-    }
 }
 
 
@@ -115,5 +85,79 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* Responsive Design for Overview */
+@media (max-width: 768px) {
+    .overview-container {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        margin-left: 0;
+        /* حل المشكلة */
+        margin-right: 0;
+        padding: 0 0px;
+        text-align: left;
+    }
+
+
+    .about-us-footer {
+        margin-top: 0px;
+        margin-bottom: -200px;
+
+    }
+
+    .overview-images {
+        margin-top: -100px;
+        margin-bottom: -90px
+    }
+
+    .overview-text,
+    .overview-images {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .overview-img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        min-height: unset;
+        margin-bottom: 0px;
+    }
+
+    .img-two {
+        margin-top: -80px;
+    }
+
+    .section-title {
+        font-size: 2em;
+        padding-top: 10px;
+    }
+
+    .section-subtitle {
+        font-size: 1.0em;
+
+    }
+
+    .about-overview .section-subtitle {
+        inline-size: 40%;
+    }
+
+    .latest-news .section-subtitle {
+        inline-size: 70%;
+    }
+
+    .projects .section-subtitle {
+        font-size: 1.1em;
+        inline-size: 35%;
+    }
+
+    .section-description {
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.6;
     }
 }

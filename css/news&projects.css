@@ -19,42 +19,6 @@
     /* background-color of container */
 }
 
-
-/* Background image */
-
-
-/*
-
-.latest-news,
-.projects {
-    padding: 80px 20px;
-    background-color: transparent;
-    background-image: url('/assets/pic/slide_5.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-}
-
-.background-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(15px);
-    background-color: rgba(255, 255, 255, 0.3);
-    z-index: 0;
-}
-
-.latest-news>*:not(.background-blur) {
-    position: relative;
-    z-index: 1;
-}
-*/
-
-
 /* design of title container for each News and Projects */
 
 .section {
@@ -84,6 +48,8 @@
     overflow-x: auto;
     padding: 10px;
     scroll-snap-type: x mandatory;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 
@@ -115,6 +81,8 @@
     transform: translateY(30px);
     will-change: opacity, transform;
     transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none !important;
+    user-select: none;
 
 }
 
@@ -154,14 +122,23 @@
     object-fit: cover;
 }
 
+.news-card img {
+    -webkit-user-drag: none;
+    /* للسحب في متصفحات WebKit مثل Chrome/Safari */
+    pointer-events: none;
+    /* (اختياري) يمنع التفاعلات مع الصورة */
+}
 
-/* Date Design In Card*/
+/* Date Design In Card     color: #46688a;
+*/
 
 .news-card .date,
 .projects-card .date {
-    font-size: 14px;
-    color: #666;
-    margin: 10px 15px 0;
+    font-size: 15px;
+    color: #003366ea;
+    font-weight: 500;
+    margin: 10px 10px 10px;
+    user-select: none;
 }
 
 
@@ -171,7 +148,9 @@
 .projects-card h3 {
     font-size: 16px;
     color: #003366;
-    margin: 5px 15px 15px;
+    margin: 13px 10px 15px;
+    user-select: none;
+
 }
 
 
@@ -253,4 +232,106 @@
         transition: none !important;
         transform: none !important;
     }
+}
+
+
+@media (max-width: 768px) {
+
+    /* latest-news section Adjustments for mobile view */
+    .latest-news {
+        margin-top: -120px;
+        margin-bottom: -100px;
+        padding: 40px 10px;
+    }
+
+    .section {
+        margin-left: 0;
+        margin-right: 0;
+        align-items: flex-start;
+        text-align: start;
+        padding: 0 10px;
+    }
+
+    .scrollable-news,
+    .scrollable-projects {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    .news-card,
+    .projects-card {
+        min-width: 220px;
+        max-width: 250px;
+        height: auto;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    .news-card img,
+    .projects-card img {
+        height: 180px;
+    }
+
+    .news-footer,
+    .projects-footer {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+    }
+
+
+
+    /* latest-news section Adjustments for mobile view */
+    .projects {
+        padding: -300px 10px;
+    }
+
+    .section {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 10px;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    /* الكروت بشكل أفقي */
+    .scrollable-projects {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        padding: 10px 0;
+        scroll-snap-type: x mandatory;
+    }
+
+    /* كرت المشروع */
+    .projects-card {
+        min-width: 220px;
+        max-width: 250px;
+        height: auto;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* صورة الكرت */
+    .projects-card img {
+        height: 180px;
+    }
+
+    .projects-footer {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .section-title {
+        font-size: 1.6em;
+    }
+
 }

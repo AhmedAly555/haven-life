@@ -1,124 +1,1273 @@
 // Array of projects data
 
 
-const projects = [{
+const projects = [
+    {
         id: 1,
-        mainImage: "../assets/pic/project1/giza2.jpg",
-        title: "Heaven Life 1",
-        description: "Heaven Life announces the successful completion of the interior finishing and 3D design works for the project, achieving the highest standards of quality and comfort. This pioneering project stands as a testament to Heaven Life's commitment to delivering integrated and innovative solutions in interior design and supply, further enhancing our growing portfolio of luxurious projects that meet the aspirations of our discerning clients. Key Project Achievements: Comprehensive Design and Planning: Full 3D design and integrated planning for the entire apartment were accomplished, ensuring functional and aesthetic harmony that aligns with the latest global trends in luxurious interior design. Exquisite Interior Finishes: The accompanying images showcase the superior quality of the finishes and the captivating designs implemented, with meticulous attention to detail and the selection of the finest materials to provide an exceptional living experience. Integrated Office Solutions: An internal office was designed and executed to offer a comfortable and practical working environment, considering the highest levels of efficiency and user comfort, reflecting design flexibility to meet diverse needs. World-Class Dressing Rooms: Dressing rooms were selected and executed with precise details and excellent wood types, ensuring the utmost luxury and durability, in addition to providing practical and elegant storage spaces. Integrated Supplies: The project encompassed all necessary supplies from start to finish, affirming our capability to deliver efficient and effective (turnkey) solutions, thereby alleviating the burden on the client. Exceptional Speed of Execution: All works were completed within a record timeframe of 80 days, demonstrating the efficiency of the team and meticulous prior planning, without any compromise on the final quality. This project underscores Heaven Life's ability to combine swift execution, the highest levels of design and finishing quality, expertise in supply management, and collaboration with top-tier suppliers to deliver projects that exceed expectations and set new benchmarks for luxury and comfort.",
-        gallery: ["../assets/pic/project1/IMG-20250505-WA0036.jpg", "../assets/pic/project1/IMG-20250505-WA0033.jpg", "../assets/pic/project1/IMG-20250505-WA0030.jpg", "../assets/pic/project1/IMG-20250505-WA0028.jpg"],
+        sector: "Luxury Villas",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Luxury Townhouse Villa – Sheikh Zayed",
+        mainImage: "../assets/id-1/villa-m.webp",
+        gallery: ["../assets/id-1/villa-1.webp", "../assets/id-1/villa-2.webp", "../assets/id-1/villa-3.webp", "../assets/id-1/villa-4.webp"],
+        location: "Sheikh Zayed, Egypt",
+        date: "2025",
+        description: `
+        <div class="project-header">
+            <h3>8-Month Architectural Masterpiece</h3>
+            <div class="project-meta">
+                <span class="location-badge">Sheikh Zayed</span>
+                <span class="innovation-badge">Smart Living</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A 480m² luxury townhouse blending cutting-edge technology with sophisticated design, delivered in record time without compromising on quality standards.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>480 m²</h4>
+                <p>Built-up Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>8 Months</h4>
+                <p>Completion Time</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Turnkey Solution</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-cube"></i> Design Innovation</h4>
+            <div class="design-feature">
+                <h5>3D Pre-Visualization</h5>
+                <ul>
+                    <li>BIM-enabled architectural planning</li>
+                    <li>Virtual reality walkthroughs</li>
+                    <li>Solar path analysis for optimal orientation</li>
+                    <li>Material visualization technology</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h5><i class="fas fa-thermometer-half"></i> Climate Control</h5>
+                <ul>
+                    <li>VRF central air conditioning</li>
+                    <li>Zoned temperature management</li>
+                    <li>Heat recovery ventilation</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h5><i class="fas fa-solar-panel"></i> Sustainability</h5>
+                <ul>
+                    <li>300L solar water heating system</li>
+                    <li>Energy-efficient glazing</li>
+                    <li>LED lighting throughout</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h5><i class="fas fa-network-wired"></i> Smart Systems</h5>
+                <ul>
+                    <li>KNX home automation</li>
+                    <li>Structured cabling network</li>
+                    <li>Integrated security system</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="material-specs">
+            <h4><i class="fas fa-palette"></i> Material Selection</h4>
+            <div class="specs-columns">
+                <div>
+                    <h5>Flooring</h5>
+                    <ul>
+                        <li>Italian marble (living areas)</li>
+                        <li>Engineered oak (bedrooms)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Wall Finishes</h5>
+                    <ul>
+                        <li>Venetian plaster feature walls</li>
+                        <li>Custom 3D wall panels</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Exterior</h5>
+                    <ul>
+                        <li>Composite wood-look cladding</li>
+                        <li>Thermal insulation system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-benefits">
+            <h4><i class="fas fa-map-marker-alt"></i> Location Advantages</h4>
+            <ul>
+                <li>500m from Sheikh Zayed business district</li>
+                <li>Gated community with 24/7 security</li>
+                <li>Proximity to international schools</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 2,
-        mainImage: "../assets/pic/project2/1.jpg",
-        title: "Heaven Life 2",
-        description: "Heaven Life announces the successful completion of the interior finishing and design works for a new residential project, embodying the concept of smart luxury through optimal space utilization. This project is a testament to Heaven Life's vision of delivering contemporary living environments that blend luxury with functionality. Every detail has been meticulously designed to enhance the quality of life and meet our clients' aspirations for spacious, organized interiors with a modern touch. Key Project Highlights: Contemporary Design and Innovative Space Utilization: The focus was on creating modern interior designs that ensure maximum efficiency from every corner of the apartment, providing intelligent storage solutions and integrated furniture elements that enhance the sense of spaciousness and comfort. High-Quality Finishes: All finishes were executed to the highest standards, with careful selection of materials and textures to ensure lasting durability and beauty, creating an elegant and comfortable environment that reflects understated luxury. Bedrooms Designed for Comfort and Efficiency: The bedrooms showcase a unique design that combines tranquility with practicality, seamlessly integrating modern storage units (dressing rooms) and display screens, providing an organized and inviting personal space. Flexible and Harmonious Living Spaces: The communal areas reflect an open design that allows for flexible use and easy movement, complemented by thoughtful lighting that highlights the beauty of the design and creates warm, welcoming atmospheres. Comprehensive and Integrated Supply Solutions: Heaven Life provided all necessary supplies for the project, from fundamentals to the finest details, ensuring a smooth execution experience and precise adherence to the design vision. This new project reaffirms Heaven Life's ability to transform residential spaces into icons of modern design, by combining engineering creativity with execution expertise and an unwavering commitment to absolute quality, delivering homes that are both functional and beautiful.",
-        gallery: ["../assets/pic/project2/2.jpg", "../assets/pic/project2/3.jpg", "../assets/pic/project2/4.jpg", "../assets/pic/project2/5.jpg"],
+        sector: "Luxury Duplex",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Luxury Duplex - Fifth Settlement, New Cairo",
+        mainImage: "../assets/id-2/duplex-m.webp",
+        gallery: ["../assets/id-2/duplex-1.webp", "../assets/id-2/duplex-2.webp", "../assets/id-2/duplex-3.webp", "../assets/id-2/duplex-4.webp"],
+        location: "New Cairo, Egypt",
+        date: "2024",
+        description: `
+        < div class= "project-overview" >
+            <p>Heaven Life presents an architectural masterpiece in New Cairo's Fifth Settlement, redefining luxury living through innovative design and exceptional execution.</p>
+        </div >
+
+        <div class="project-highlights">
+            <h4>Project Highlights:</h4>
+            <ul>
+                <li><strong>Completion:</strong> 2024</li>
+            </ul>
+        </div>
+
+        <div class="key-features">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Comprehensive 3D design with precision execution</li>
+                <li>Premium interior/exterior finishes with luxury materials</li>
+                <li>Spacious rooftop terrace with entertainment areas</li>
+                <li>Modern open-concept living spaces</li>
+                <li>Strategic location in Fifth Settlement</li>
+            </ul>
+        </div>
+
+        <div class="project-achievement">
+            <p>This project demonstrates Heaven Life's commitment to creating residential experiences that blend sophistication with functional design.</p>
+        </div>`,
 
     },
     {
         id: 3,
-        mainImage: "../assets/pic/project3/1.jpg",
-        title: "Heaven Life 3",
-        description: "Heaven Life announces the successful completion of the design and 3D planning works for one of the largest commercial malls in the region, which aims to provide an integrated environment designed to efficiently and innovatively accommodate all types of spaces. This project represents a new architectural and engineering achievement added to Heaven Life's portfolio, reaffirming our capability to deliver design and execution solutions for major commercial projects that serve wide consumer segments and offer a unique shopping and entertainment experience. Key Project Highlights: Massive and Welcoming Architectural Design: The commercial mall has been designed to present a modern and inviting facade, with comprehensive internal space planning that ensures smooth flow of movement and comfortable reception for large numbers of visitors, enhancing their overall experience. Optimal Space Utilization: Meticulous planning was undertaken to ensure maximum utilization of every square meter within the mall, providing diverse commercial, entertainment, and service areas that cater to all needs and suit various activities. Comprehensive 3D Planning and Design: The project was entirely executed relying on advanced 3D designs at all its stages, ensuring precision in implementation and a comprehensive visualization of the project before commencing work, thus achieving an integrated architectural vision. Versatility in Usage: The mall encompasses multi-use spaces suitable for large retail stores, restaurants, entertainment zones, and service areas, making it a comprehensive destination for visitors. Modern and Appealing Environment: Attention was paid to aesthetic details and lighting to create a vibrant and welcoming atmosphere, combining modernity with comfort to deliver an enjoyable and distinctive shopping and entertainment experience. This grand project underscores Heaven Life's ability to execute leading commercial ventures, by combining innovative architectural design, strategic space planning, and extensive expertise in managing large-scale projects, to deliver facilities that contribute to economic growth and fulfill community needs.",
-        gallery: ["../assets/pic/project3/2.jpg", "../assets/pic/project3/3.jpg", "../assets/pic/project3/4.jpg", "../assets/pic/project3/5.jpg"],
+        sector: "Landscape Design",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Premium Landscape Qattamiya Gardens",
+        mainImage: "../assets/id-3/land-m.webp",
+        gallery: ["../assets/id-3/land-1.webp", "../assets/id-3/land-2.webp", "../assets/id-3/land-3.webp", "../assets/id-3/land-4.webp"],
+        location: "Katameya Gardens, Cairo",
+        date: "2024",
+        description: `
+        <div class="project-header">
+            <h3>3-Month Luxury Landscape Transformation</h3>
+            <div class="project-meta">
+                <span class="location-badge">New Cairo</span>
+                <span class="sustainability-badge">Eco-Conscious</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A 300m² premium outdoor living space featuring innovative water features, smart lighting, and hybrid vegetation, completed Q1 2024.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>300 m²</h4>
+                <p>Total Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>12 Weeks</h4>
+                <p>Completion Time</p>
+            </div>
+            <div class="stat-box">
+                <h4>60/40</h4>
+                <p>Natural/Artificial Greenery</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-project-diagram"></i> Digital Planning</h4>
+            <div class="design-feature">
+                <ul>
+                    <li><strong>2D Technical Drawings:</strong> AutoCAD precision planning</li>
+                    <li><strong>3D Visualization:</strong> Lumion real-time rendering</li>
+                    <li><strong>VR Walkthroughs:</strong> Client immersion pre-construction</li>
+                    <li><strong>Solar Studies:</strong> Optimal light pattern planning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h5><i class="fas fa-swimming-pool"></i> Aquatic Features</h5>
+                <ul>
+                    <li>8m × 4m infinity-edge pool</li>
+                    <li>Natural stone waterfall with flow control</li>
+                    <li>Integrated jacuzzi zone</li>
+                    <li>Saltwater purification system</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h5><i class="fas fa-lightbulb"></i> Lighting System</h5>
+                <ul>
+                    <li>DALI-controlled LED pathways</li>
+                    <li>Underwater color-changing lights</li>
+                    <li>Moonlight-effect tree uplighting</li>
+                    <li>Motion-activated security lighting</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <h5><i class="fas fa-leaf"></i> Botanical Elements</h5>
+                <ul>
+                    <li>Drought-resistant native species (60%)</li>
+                    <li>UV-stabilized artificial greenery (40%)</li>
+                    <li>Emerald Zoysia natural turf</li>
+                    <li>Automated drip irrigation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="technical-section">
+            <h4><i class="fas fa-cogs"></i> Technical Specifications</h4>
+            <div class="spec-grid">
+                <div class="spec-card">
+                    <h5>Hardscaping</h5>
+                    <ul>
+                        <li>Honed limestone paving</li>
+                        <li>Reinforced concrete substructure</li>
+                        <li>Permeable gravel pathways</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h5>Water Systems</h5>
+                    <ul>
+                        <li>Variable-speed pool pump</li>
+                        <li>Rainwater harvesting</li>
+                        <li>Smart moisture sensors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="sustainability-section">
+            <h4><i class="fas fa-seedling"></i> Sustainable Features</h4>
+            <ul>
+                <li>Solar-powered water features</li>
+                <li>Native plant conservation</li>
+                <li>Smart water management</li>
+                <li>LED energy-efficient lighting</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 4,
-        mainImage: "../assets/pic/project4/1.jpg",
-        title: "Heaven Life 4",
-        description: "Heaven Life announces the completion of its new architectural masterpiece: a luxurious duplex project in the heart of New Cairo's Fifth Settlement. This project stands as a testament to our vision of transforming residential spaces into icons of modern living, where luxury meets exceptional quality and design innovation. At Heaven Life, we believe that a home is a reflection of refined taste and contemporary aspirations. With this philosophy, this duplex has been designed and executed to provide a comprehensive living experience that exceeds expectations, with a focus on creating spacious and comfortable environments. Key Highlights of This Luxurious Duplex: Comprehensive and Detailed 3D Design: Every step of the project was based on precise 3D designs, ensuring the highest levels of accuracy and harmony between all spaces, both interior and exterior. Superior Quality Interior and Exterior Finishes: The duplex reflects an unparalleled level of quality in all its finishes, with the selection of premium materials and the application of the latest techniques to deliver a luxurious and enduring living environment. Exceptional Rooftop Terrace Design: The project features a spacious rooftop terrace meticulously designed, offering ideal entertainment and relaxation areas with breathtaking city views, equipped with a barbecue zone and comfortable seating. Spacious and Modern Interior Spaces: The duplex includes expansive living areas, contemporary bedrooms, and a sophisticated kitchen, providing an ideal environment for daily life and entertainment. Prime Location in New Cairo's Fifth Settlement: The duplex is situated in one of the most prestigious neighborhoods of the Fifth Settlement, ensuring easy access to essential facilities, services, and entertainment areas. This new project showcases Heaven Life's commitment to delivering integrated design and execution solutions that go beyond mere construction to create spaces where dreams come alive, offering a residential experience that combines sophistication, comfort, and high efficiency.",
-        gallery: ["../assets/pic/project4/2.jpg", "../assets/pic/project4/3.jpg", "../assets/pic/project4/4.jpg", "../assets/pic/project4/5.jpg"],
+        sector: "Commercial",
+        client: "Private Client",
+        role: "Lead Design & 3D Planning Consultant",
+        title: "Palza Mall Design Project, New Cairo",
+        mainImage: "../assets/id-4/shopping-m.webp",
+        gallery: ["../assets/id-4/shopping-1.webp", "../assets/id-4/shopping-2.webp", "../assets/id-4/shopping-3.webp", "../assets/id-4/shopping-4.webp"],
+        location: "Cairo, Egypt",
+        date: "2024",
+        description: `
+        <div class="project-overview">
+            <p>Heaven Life has completed the comprehensive design and 3D planning for one of Egypt's largest commercial malls (1,500 m² GBA), creating an integrated retail and entertainment destination serving 25,000+ daily visitors.</p>
+        </div>
+
+        <div class="project-specs">
+            <h4>Project Specifications:</h4>
+            <ul>
+                <li><strong>Total Area:</strong> 1,500 m²</li>
+                <li><strong>Capacity:</strong> 1,000+ daily visitors</li>
+                <li><strong>Design Period:</strong> 6 months</li>
+                <li><strong>Retail Units:</strong> 50+ stores</li>
+                <li><strong>Floors:</strong> 2 levels</li>
+                <li><strong>Parking:</strong> 100 vehicles</li>
+            </ul>
+        </div>
+
+        <div class="design-highlights">
+            <h4>Design Highlights:</h4>
+            <ul>
+                <li><strong>Architectural Design:</strong> Contemporary facade with optimized visitor flow patterns</li>
+                <li><strong>Space Allocation:</strong> 
+                    <ul class="sub-list">
+                        <li>65% Retail (250+ stores)</li>
+                        <li>20% F&B (50 outlets)</li>
+                        <li>15% Entertainment (Cinema, Family Zone)</li>
+                    </ul>
+                </li>
+                <li><strong>3D Visualization:</strong> Full BIM implementation (Revit + 3Ds Max)</li>
+                <li><strong>Sustainability:</strong> LEED Gold targeted certification</li>
+                <li><strong>Technology:</strong> Smart mall solutions including:
+                    <ul class="sub-list">
+                        <li>Digital wayfinding</li>
+                        <li>Automated parking system</li>
+                        <li>AI-powered crowd management</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="technical-details">
+            <h4>Technical Specifications:</h4>
+            <ul>
+                <li><strong>Circulation:</strong> 8m wide main corridors + 6 escalators + 12 elevators</li>
+                <li><strong>Lighting:</strong> LED ecosystem with circadian rhythm technology</li>
+                <li><strong>Materials:</strong> Composite panels + structural glazing facade system</li>
+            </ul>
+        </div>
+
+        <div class="project-impact">
+            <p>This landmark project demonstrates Heaven Life's capability to deliver world-class commercial spaces that combine operational efficiency with exceptional visitor experiences, setting new standards for retail developments in Egypt.</p>
+        </div>
+    `,
 
     },
     {
         id: 5,
-        mainImage: "../assets/pic/project5/1.jpg",
-        title: "Heaven Life 5",
-        description: "Heaven Life proudly announces the completion of a luxurious apartment project within the prestigious Promenade Compound. This achievement exemplifies the pinnacle of integration between precise design vision (2D & 3D) and exceptional execution, delivering an unparalleled living experience crafted to the highest quality standards. At Heaven Life, every project is a success story that begins with an idea and translates into tangible reality. With this project in Promenade, we transformed dreams into vibrant spaces, combining modern elegance with functional efficiency, embarking on an engineering journey that spanned just three months, yet encompassed years of expertise and precision. The Creative Journey in This Project's Details: From Concept to Virtual Reality (2D & 3D): The apartment's journey began with meticulous two-dimensional (2D) architectural planning, subsequently evolving into rich, detailed three-dimensional (3D) visualizations. This phase allowed the client a comprehensive and interactive preview of the project before construction began, serving as a cornerstone for ensuring alignment between vision and final results. Sequential and Masterful Execution: Plastering and Foundation Works: Work commenced with precise plastering, forming the basis for all subsequent finishes, ensuring smooth surfaces and readiness. Vital Systems (Plumbing & Electrical): This was followed by integrated plumbing and electrical works, designed and installed to the highest safety and efficiency standards to meet all contemporary needs. Floor and Wall Aesthetics: Subsequently, ceramic works, and the selection of luxurious porcelain and marble were installed. The final touch was the painting, applied with modern colors that exude tranquility and luxury. Refined Interior Finishes and High Specifications: Every element in the finishing touches was meticulously selected, from contemporary furniture and aesthetic lighting to the finest details that impart a touch of sophistication and luxury to every corner of the apartment. Efficient Completion (3 Months): Despite the project's scope and intricate details, all works were completed in a remarkably short period of just three months, starting from early 2024, emphasizing Heaven Life's commitment to precision, speed, and ultimate quality. This project in Promenade Compound is more than just a finished apartment; it is an embodiment of Heaven Life's philosophy in delivering a luxurious and integrated residential experience, where engineering innovation meets design beauty, and client visions are realized with the highest possible quality.",
-        gallery: ["../assets/pic/project5/2.jpg", "../assets/pic/project5/3.jpg", "../assets/pic/project5/4.jpg", "../assets/pic/project5/5.jpg"],
+        sector: "Residential",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Luxury Apartment - Promenade Compound",
+        mainImage: "../assets/id-5/Promenade-m.webp",
+        gallery: ["../assets/id-5/Promenade-1.webp", "../assets/id-5/Promenade-2.webp", "../assets/id-5/Promenade-3.webp", "../assets/id-5/Promenade-4.webp"],
+        location: "Promenade Compound, New Cairo",
+        date: "2023",
+        description: `
+        <div class="project-overview">
+            <p>A premium residential project completed within 3 months, combining meticulous 2D/3D planning with high-end execution to deliver a turnkey luxury apartment.</p>
+        </div>
+
+        <div class="project-specs">
+            <h4>Project Specifications:</h4>
+            <ul>
+                <li><strong>Area:</strong> 120 m² (3BR)</li>
+                <li><strong>Completion Time:</strong> 3 months (Q1 2023)</li>
+                <li><strong>Floors:</strong> 8th Floor in Tower B</li>
+                <li><strong>View:</strong> Panoramic compound view</li>
+            </ul>
+        </div>
+
+        <div class="design-process">
+            <h4>Design & Planning:</h4>
+            <ul>
+                <li><strong>2D Planning:</strong> Detailed architectural drawings</li>
+                <li><strong>3D Visualization:</strong> Full interactive walkthroughs</li>
+                <li><strong>Software Used:</strong> AutoCAD, 3Ds Max, SketchUp</li>
+            </ul>
+        </div>
+
+        <div class="execution-phases">
+            <h4>Execution Phases:</h4>
+            <ol>
+                <li><strong>Structural Works:</strong> Precision plastering and surface preparation</li>
+                <li><strong>MEP Systems:</strong>
+                    <ul class="sub-list">
+                        <li>Plumbing with Grohe fixtures</li>
+                        <li>Electrical with Legrand solutions</li>
+                        <li>HVAC with Daikin VRV system</li>
+                    </ul>
+                </li>
+                <li><strong>Finishes:</strong>
+                    <ul class="sub-list">
+                        <li>Flooring: Italian marble & premium porcelain</li>
+                        <li>Wall finishes: Custom paint & wall panels</li>
+                        <li>Ceiling: Gypsum with LED cove lighting</li>
+                    </ul>
+                </li>
+                <li><strong>Interior Package:</strong>
+                    <ul class="sub-list">
+                        <li>Modern furniture selection</li>
+                        <li>Designer lighting fixtures</li>
+                        <li>Smart home integration</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="materials-branding">
+            <h4>Premium Materials:</h4>
+            <ul>
+                <li><strong>Kitchen:</strong> SieMatic cabinets with Bosch appliances</li>
+                <li><strong>Bathrooms:</strong> Duravit sanitaryware</li>
+                <li><strong>Doors:</strong> Custom hardwood doors</li>
+                <li><strong>Smart Home:</strong> Control4 automation system</li>
+            </ul>
+        </div>
+
+        <div class="project-achievement">
+            <p>This project demonstrates Heaven Life's capability to deliver luxury turnkey solutions within aggressive timelines without compromising quality.</p>
+        </div>
+    `,
 
     },
     {
         id: 6,
-        mainImage: "../assets/pic/project6/1.jpg",
-        title: "Heaven Life 6",
-        description: "Heaven Life proudly announces the completion of a duplex project in the Diplomats neighborhood of New Cairo, an accomplishment that highlights our ability to execute professionally with high flexibility. Work commenced directly based on the client's directives and without prior 3D designs, while maintaining the highest quality standards over just four months. This project serves as a testament to Heaven Life's expertise in handling various execution challenges, delivering integrated solutions that precisely and swiftly meet client visions, even in projects requiring immediate adaptation to evolving requirements. The Journey of Precise Execution in This Duplex: Direct Execution Commencement: Our work on the duplex began immediately based on the client's vision and instructions, reflecting our flexibility and efficiency in operations even without prior 3D designs. Solid Foundation and Robust Infrastructure: Initial phases included meticulous plastering works that formed a strong base, followed by integrated plumbing and electrical installations executed to the highest specifications to ensure long-term effectiveness and safety. High-Quality Finishes and Meticulous Details: Attention was paid to every detail in the finishing works, including carpentry for doors, aluminum installations, and the final painting which added a sophisticated aesthetic touch to the interior spaces. Integrated Swimming Pool Addition: The project featured the construction of a complete swimming pool, including its dedicated electrical circuit and the specific pool pump room, ensuring maximum safety and efficiency. Speed and Precision in Completion: This integrated project was completed in a remarkably short period of four months, starting in June 2023 and finishing in October 2023, underscoring Heaven Life's commitment to quality and efficiency within set timelines. This duplex in the Diplomats neighborhood stands as a testament to Heaven Life's capability to deliver comprehensive and customized execution solutions, adapting to diverse client requirements, and achieving the highest levels of satisfaction through superior quality and adherence to schedules.",
-        gallery: ["../assets/pic/project6/2.jpg", "../assets/pic/project6/3.jpg", "../assets/pic/project6/4.jpg", "../assets/pic/project6/5.jpg"],
+        sector: "Outdoor Living",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Luxury Outdoor Living Space - First Settlement",
+        mainImage: "../assets/id-6/living-m.webp",
+        gallery: ["../assets/id-6/living-1.webp", "../assets/id-6/living-2.webp", "../assets/id-6/living-3.webp", "../assets/id-6/living-4.webp"],
+        location: "First Settlement, New Cairo",
+        date: "2023",
+        description: `
+        <div class="project-overview">
+            <p>A premium outdoor transformation completed in just 7 days, blending contemporary design with natural elements to create a seamless indoor-outdoor living experience.</p>
+        </div>
+
+        <div class="project-specs">
+            <h4>Project Specifications:</h4>
+            <ul>
+                <li><strong>Area:</strong> 50 m² covered outdoor space</li>
+                <li><strong>Completion Time:</strong> 7 days (April 2023)</li>
+                <li><strong>Location:</strong> First Settlement rooftop</li>
+                <li><strong>Capacity:</strong> 7-12 persons</li>
+            </ul>
+        </div>
+
+        <div class="design-features">
+            <h4>Design Features:</h4>
+            <ul>
+                <li><strong>Glass Roof System:</strong> 10mm tempered glass with UV protection</li>
+                <li><strong>Wall Composition:</strong>
+                    <ul class="sub-list">
+                        <li>Natural stone cladding (60%)</li>
+                        <li>Artificial greenery panels (30%)</li>
+                        <li>Composite wood finishes (10%)</li>
+                    </ul>
+                </li>
+                <li><strong>Lighting System:</strong> 
+                    <ul class="sub-list">
+                        <li>LED ambient lighting</li>
+                        <li>Dimmable spotlights</li>
+                        <li>Decorative string lights</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="execution-details">
+            <h4>Execution Highlights:</h4>
+            <ol>
+                <li><strong>Day 1-2:</strong> Site preparation & structural framework</li>
+                <li><strong>Day 3-4:</strong> Glass roof installation & wall systems</li>
+                <li><strong>Day 5:</strong> Electrical works & lighting</li>
+                <li><strong>Day 6:</strong> Finishing touches & quality checks</li>
+                <li><strong>Day 7:</strong> Final installation & client handover</li>
+            </ol>
+        </div>
+
+        <div class="material-specs">
+            <h4>Material Specifications:</h4>
+            <ul>
+                <li><strong>Flooring:</strong> Anti-slip porcelain tiles</li>
+                <li><strong>Furniture:</strong> Weather-resistant wicker set</li>
+                <li><strong>Shading:</strong> Retractable sun screens</li>
+                <li><strong>Climate Control:</strong> Built-in misting system</li>
+            </ul>
+        </div>
+
+        <div class="project-achievement">
+            <p>This project demonstrates Heaven Life's unmatched capability to deliver high-end outdoor transformations within aggressive timelines while maintaining exceptional quality standards.</p>
+        </div>
+    `,
 
     },
     {
         id: 7,
-        mainImage: "../assets/pic/project7/1.jpg",
-        title: "Heaven Life 7",
-        description: "Heaven Life, in its continuous pursuit of creating extraordinary spaces, proudly announces the completion of a comprehensive landscape project in Katameya Gardens. This achievement has transformed the outdoor area into a luxurious oasis of tranquility and beauty, from meticulous 2D and 3D design to the flawless execution of every intricate detail. At Heaven Life, we believe that the beauty of a home is perfected by the harmony between its outdoor and indoor spaces. This project has been designed and executed to serve as a sanctuary that offers the highest levels of luxury and relaxation, imbued with a touch of creativity and innovation. Key Features of This Katameya Gardens Oasis: Digital Design Journey (2D & 3D): The transformation process began with precise 2D architectural planning, and then the vision was fully and vividly realized through detailed 3D designs. This approach ensures execution accuracy and that the final results align perfectly with aesthetic and functional aspirations. Integrated Landscape for a Unique Experience: The landscaping was fully implemented to include a wide array of aesthetic and functional elements: Stunning Swimming Pool and Waterfall: A focal point of the project, the swimming pool offers a refreshing experience, complemented by an expertly designed waterfall that adds a touch of nature and soothing sound. Illuminated Marble and Enchanting Walkways: Illuminated marble was used in various shapes and designs to give the space a unique character, along with illuminated marble walkways, creating a magical ambiance, especially in the evening. Integrated Systems (Electrical & Plumbing): All necessary electrical and plumbing works were meticulously executed to ensure the efficient operation of all water features and lighting. Artistic Green Touches: The work included a harmonious blend of artificial plants for enduring beauty and natural plants to impart vibrancy and nature, in addition to full preparation for natural grass. Rapid Completion and Superior Quality: This comprehensive project was completed in a remarkably short period of just three months (starting May 2024 and finishing August 2024), reflecting Heaven Life's efficiency in project management and delivery to the highest quality standards. This project in Katameya Gardens demonstrates Heaven Life's leadership in transforming outdoor spaces into artistic masterpieces, combining design innovation, advanced technology, and execution expertise to create unique and sustainable environments that meet our clients' aspirations.",
-        gallery: ["../assets/pic/project7/2.jpg", "../assets/pic/project7/3.jpg", "../assets/pic/project7/4.jpg", "../assets/pic/project7/5.jpg"],
+        sector: "Landscape Design",
+        client: "Private Client",
+        role: "Full-Service Landscape Contractor",
+        title: "Luxury Landscape Oasis - Katameya, Cairo",
+        mainImage: "../assets/id-7/land-m.webp",
+        gallery: ["../assets/id-7/land-1.webp", "../assets/id-7/land-2.webp", "../assets/id-7/land-3.webp", "../assets/id-7/land-4.webp"],
+        location: "Katameya, Cairo",
+        date: "2024",
+        description: `
+        <div class="project-header">
+            <h3>3-Month Landscape Transformation</h3>
+            <div class="project-meta">
+                <span class="location-badge">Katameya Gardens</span>
+                <span class="duration-badge">May - Aug 2024</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A comprehensive 250m² landscape transformation blending water features, illuminated hardscaping, and hybrid vegetation to create a private resort-style retreat.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <li><strong>Area :</strong> 250 m² covered outdoor space</li>
+            </div>
+            <div class="stat-box">
+                <h4>12 Weeks</h4>
+                <p>Completion Time</p>
+            </div>
+            <div class="stat-box">
+                <h4>5 Zones</h4>
+                <p>Functional Areas</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-project-diagram"></i> Digital Design Process</h4>
+            <div class="design-feature">
+                <ul>
+                    <li><strong>2D Master Planning :</strong> AutoCAD technical drawings</li>
+                    <li><strong>3D Visualization :</strong> Lumion real-time rendering</li>
+                    <li><strong>VR Walkthroughs :</strong> Client preview capability</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h4><i class="fas fa-spa"></i> Landscape Features</h4>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h5>Aquatic Centerpiece</h5>
+                    <ul>
+                        <li>25m infinity-edge pool</li>
+                        <li>Natural stone waterfall</li>
+                        <li>Integrated jacuzzi zone</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h5>Illuminated Hardscape</h5>
+                    <ul>
+                        <li>Hand-cut marble pathways</li>
+                        <li>LED in-ground lighting</li>
+                        <li>Weather-resistant finishes</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h5>Botanical Elements</h5>
+                    <ul>
+                        <li>60% drought-resistant plants</li>
+                        <li>40% artificial greenery</li>
+                        <li>Automatic irrigation system</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="systems-section">
+            <h4><i class="fas fa-cogs"></i> Integrated Systems</h4>
+            <ul class="system-features">
+                <li>
+                    <strong>Water Management :</strong>
+                    <ul>
+                        <li>Smart filtration system</li>
+                        <li>Rainwater harvesting</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Lighting Control :</strong>
+                    <ul>
+                        <li>DALI-controlled LED system</li>
+                        <li>Moonlight effect lighting</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="testimonial">
+            <blockquote>
+                "Heaven Life transformed our outdoor space into a year-round resort experience, delivering on both aesthetics and functionality."
+                <cite>- Homeowner</cite>
+            </blockquote>
+        </div>
+    `,
 
     },
     {
         id: 8,
-        mainImage: "../assets/pic/project8/1.jpg",
-        title: "Heaven Life 8",
-        description: "Heaven Life, a leader in creating exceptional spaces, proudly announces its latest accomplishment: the design and execution of a luxurious outdoor living area in New Cairo's First Settlement. In just seven days, we transformed an ordinary space into a complete outdoor living zone, combining contemporary innovation with natural beauty, crafted to the highest standards of quality and efficiency. At Heaven Life, we pride ourselves on our ability to turn visions into tangible realities in record time, without compromising on execution quality or meticulous attention to detail. This project embodies our philosophy of delivering swift and stunning design and execution solutions. What Makes This Exceptional Outdoor Living Space Stand Out: Modern and Appealing Design: The outdoor living area was designed to be a luxurious extension of the home, providing an ideal space for relaxation and entertainment. Unique and Innovative Design Elements: Glass Roof: Adds a contemporary and transparent touch, allowing natural light to flood in and creating a sense of spaciousness. Multi-Material Walls: A harmonious blend of stone and artificial greenery was used to impart a timeless green touch, along with wood substitutes that add warmth and modernity to the space. Enchanting Lighting and Integrated Electrical Works: All necessary electrical works were executed with high precision, ensuring modern and attractive lighting that highlights the design's beauty and provides ideal ambiance for evening use. Prime Location in the First Settlement: The location in the First Settlement adds value to the project, providing easy access in a vibrant area. Record-Breaking Completion Time (7 Days): What truly distinguishes this project is its complete execution in an astonishingly short period of just seven days, during June. This reflects the high efficiency of the Heaven Life team in planning and executing projects at remarkable speed without compromising on quality. This project underscores Heaven Life's commitment to delivering innovative and swift design and execution solutions, ensuring the highest levels of client satisfaction, and transforming outdoor spaces into luxurious oases for relaxation and entertainment.",
-        gallery: ["../assets/pic/project8/2.jpg", "../assets/pic/project8/3.jpg", "../assets/pic/project8/4.jpg", "../assets/pic/project8/5.jpg"],
+        sector: "Residential Finishing",
+        client: "Private Client",
+        role: "Turnkey Finishing Contractor",
+        title: "Luxury Apartment - Nasr City, Cairo",
+        mainImage: "../assets/id-8/aprt-m.webp",
+        gallery: ["../assets/id-8/aprt-1.webp", "../assets/id-8/aprt-2.webp", "../assets/id-8/aprt-3.webp", "../assets/id-8/aprt-4.webp"],
+        location: "Nasr City, Cairo",
+        date: "2025",
+        description: `
+        <div class="project-header">
+            <h3>Premium Residential Finishing</h3>
+            <div class="project-meta">
+                <span class="location-badge">Nasr City</span>
+                <span class="duration-badge">3-5 Months</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A complete high-end finishing package transforming structural work into a modern smart home with premium materials and meticulous craftsmanship.</p>
+        </div>
+
+        <div class="project-specs">
+            <h4><i class="fas fa-ruler-combined"></i> Project Specifications</h4>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h5>Area</h5>
+                    <p>100 m² (2BR)</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Finishing Level</h5>
+                    <p>Luxury Category A</p>
+                </div>
+                <div class="spec-item">
+                    <h5>Smart Systems</h5>
+                    <p>Full home automation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="execution-section">
+            <h4><i class="fas fa-tasks"></i> Execution Phases</h4>
+            <div class="phase-accordion">
+                <div class="phase">
+                    <h5>1. Structural Preparation (Weeks 1-4)</h5>
+                    <ul>
+                        <li>Precision plastering & leveling</li>
+                        <li>Complete MEP rough-ins</li>
+                        <li>Subfloor preparation</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <h5>2. Core Finishes (Weeks 5-8)</h5>
+                    <ul>
+                        <li>Porcelain flooring installation</li>
+                        <li>Custom millwork fabrication</li>
+                        <li>Wall cladding & feature walls</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <h5>3. Final Touches (Weeks 9-12)</h5>
+                    <ul>
+                        <li>Smart lighting commissioning</li>
+                        <li>Premium paint application</li>
+                        <li>Quality assurance inspections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h4><i class="fas fa-star"></i> Premium Features</h4>
+            <div class="feature-highlights">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h5>Smart Lighting</h5>
+                    <p>Lutron HomeWorks system with scene programming</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h5>Wall Treatments</h5>
+                    <p>Italian marble cladding + custom wall panels</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h5>Custom Millwork</h5>
+                    <p>Handcrafted walnut veneer cabinetry</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="material-specs">
+            <h4><i class="fas fa-clipboard-check"></i> Material Specifications</h4>
+            <ul class="material-list">
+                <li><strong>Flooring:</strong> 18mm engineered oak wood (Herringbone pattern)</li>
+                <li><strong>Paint:</strong> Jotun Lady Majesty premium series</li>
+                <li><strong>Hardware:</strong> Hafele architectural finishes</li>
+                <li><strong>Smart System:</strong> Control4 automation package</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 9,
-        mainImage: "../assets/pic/project9/1.jpg",
-        title: "Heaven Life 9",
-        description: "Heaven Life, a leader in designing and executing luxurious outdoor spaces, proudly announces the completion of a comprehensive landscape project in the heart of Katameya Gardens. This project embodies our vision of transforming green spaces into oases of beauty and tranquility, with an innovative integration of water features, smart lighting, and breathtaking flora, completed within a record timeframe from January 2025 to April 2025. At Heaven Life, we strive to create unique living experiences that extend beyond the walls of the home. This meticulously designed landscape is not merely an aesthetic addition; it is an invitation to relax and contemplate in a harmonious environment, prepared with the highest standards of quality and professionalism. Details of the Katameya Gardens Oasis Project: Advanced Design Journey (2D & 3D): Before any execution began, the concept was refined through precise two-dimensional designs, then fully and realistically embodied in three-dimensional models. This approach ensures that the vision aligns with the finest details of execution and provides the client with a clear picture of the final outcome. Luxurious Integrated Landscape Elements: Swimming Pool and Flowing Waterfall: The swimming pool was designed to be a focal point for relaxation and entertainment, complemented by an artistic waterfall that adds a touch of vitality and soothing sound. Illuminated Marble Walkway: Pathways crafted from illuminated marble extend gracefully, imparting a touch of modern elegance and allure, especially in the evening, guiding guests through the garden with sophistication. Advanced Systems (Electrical & Plumbing): All necessary electrical and plumbing works were executed with high efficiency, ensuring optimal operation of water features and ambient lighting. Diverse Plant Cover: A combination of artificial plants, ensuring perpetual beauty with minimal maintenance, and natural plants, adding vitality and charm to the garden, was integrated. Additionally, full preparation for natural grass was undertaken, forming a lush green base for the space. Speed and Precision in Completion (3 Months): Despite the project's complexity and diverse elements, all works were completed within a remarkably short period of just three months, commencing in January 2025 and concluding in April 2025. This underscores Heaven Life's commitment to superior quality and ability to deliver within specified timelines. This project in Katameya Gardens stands as a testament to Heaven Life's capability to transform outdoor spaces into luxurious and sustainable environments, combining innovative design with masterful execution to deliver an exceptional living experience for our clients.",
-        gallery: ["../assets/pic/project9/2.jpg", "../assets/pic/project9/3.jpg", "../assets/pic/project9/4.jpg", "../assets/pic/project9/5.jpg"],
+        sector: "Luxury Residential",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Signature Luxury Villa - New Cairo",
+        mainImage: "../assets/id-9/villa-m.webp",
+        gallery: ["../assets/id-9/villa-1.webp", "../assets/id-9/villa-2.webp", "../assets/id-9/villa-3.webp", "../assets/id-9/villa-4.webp"],
+        location: "New Cairo Compound",
+        date: "2024",
+        description: `
+        <div class="project-header">
+            <h3>Turnkey Villa Construction</h3>
+            <div class="project-meta">
+                <span class="location-badge">New Cairo</span>
+                <span class="excellence-badge">Design-Build Excellence</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A complete 550m² luxury villa delivered turnkey, from 3D conceptualization to fully furnished reality, showcasing Heaven Life's end-to-end capabilities in premium residential construction.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>550 m²</h4>
+                <p>Built-up Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>6 Beds</h4>
+                <p>Master Suites</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Turnkey Delivery</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-cube"></i> Design Innovation</h4>
+            <div class="design-feature">
+                <h5>Immersive 3D Process</h5>
+                <ul>
+                    <li>Full BIM implementation (Revit + Enscape)</li>
+                    <li>Virtual reality walkthroughs</li>
+                    <li>Real-time material visualization</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="construction-section">
+            <h4><i class="fas fa-hard-hat"></i> Construction Highlights</h4>
+            <div class="phase-grid">
+                <div class="phase-card">
+                    <h5>Structural Excellence</h5>
+                    <ul>
+                        <li>Reinforced concrete frame</li>
+                        <li>Thermal insulation layers</li>
+                        <li>Acoustic separation walls</li>
+                    </ul>
+                </div>
+                <div class="phase-card">
+                    <h5>Premium Finishes</h5>
+                    <ul>
+                        <li>Custom Italian marble flooring</li>
+                        <li>Handcrafted wood paneling</li>
+                        <li>Smart glass facades</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="systems-section">
+            <h4><i class="fas fa-network-wired"></i> Integrated Systems</h4>
+            <ul class="system-list">
+                <li>
+                    <strong>Smart Home:</strong>
+                    <ul>
+                        <li>Control4 automation system</li>
+                        <li>KNX lighting control</li>
+                        <li>Multi-zone audio/video</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Climate:</strong>
+                    <ul>
+                        <li>VRF air conditioning</li>
+                        <li>Underfloor heating</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="location-benefits">
+            <h4><i class="fas fa-map-marker-alt"></i> Compound Amenities</h4>
+            <ul>
+                <li>24/7 secured community</li>
+                <li>Landscaped gardens</li>
+                <li>Olympic-size swimming pool</li>
+                <li>Clubhouse facilities</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 10,
-        mainImage: "../assets/pic/project10/1.jpg",
-        title: "Heaven Life 10",
-        description: "Heaven Life proudly announces the completion of the essential foundational works for a residential apartment in Nasr City. The completed stages of work exemplify our commitment to high quality and engineering precision at every step. Despite commencing work without prior 2D or 3D designs, our specialized team successfully translated the vision into tangible reality, paving the way for a residential environment that combines durability and aesthetic appeal. At Heaven Life, we believe that a strong foundation is the key to the overall quality of any project. For this apartment in Nasr City, we focused on executing all foundational works to the highest standards, ensuring long-term sustainability and comfort for its future residents. The Solid Foundations of This Residential Project: Professional and Integrated Work Phases: High-Quality Plastering Works: Our work began with the meticulous application of essential plastering layers, ensuring smooth surfaces and readiness for final finishes. Advanced Electrical and Plumbing Infrastructure: All electrical and plumbing works were executed according to the latest engineering codes, with a focus on quality to ensure maximum safety and operational efficiency for the future. Meticulous Carpentry Works: Carpentry for doors and windows was completed with high-quality manufacturing and installation, providing the foundation for all interior elements. Superior Quality Ceramic and Flooring Installation: Ceramic and flooring materials were carefully selected and installed to ensure the durability and longevity of the floors. Flexibility in Execution: Despite the absence of prior design plans (2D or 3D), our team demonstrated exceptional adaptability and execution capability, relying on professional expertise and continuous communication with the client to ensure their vision was realized. Lasting Quality: Our ultimate goal for this project is to provide a strong and durable foundation, ensuring peace of mind for the client, minimizing the need for future maintenance, and providing a solid base for the luxurious final finishes that will distinguish the apartment. This project in Nasr City reflects Heaven Life's commitment to delivering integrated foundation and finishing services, where quality is the primary standard, and professionalism is our approach at every step, to provide our clients with residential spaces that meet their aspirations.",
-        gallery: ["../assets/pic/project10/2.jpg", "../assets/pic/project10/3.jpg", "../assets/pic/project10/4.jpg", "../assets/pic/project10/5.jpg"],
+        sector: "Luxury Interiors",
+        client: "Private Client",
+        role: "Turnkey Interior Contractor",
+        title: "Premium Apartment Interior - Cairo",
+        mainImage: "../assets/id-10/apartment-m.webp",
+        gallery: ["../assets/id-10/apartment-1.webp", "../assets/id-10/apartment-2.webp", "../assets/id-10/apartment-3.webp", "../assets/id-10/apartment-4.webp"],
+        location: "Prime Cairo Location, Egypt",
+        date: "2024",
+        description: `
+        <div class="project-header">
+            <h3>80-Day Luxury Interior Transformation</h3>
+            <div class="project-meta">
+                <span class="location-badge">Cairo Residence</span>
+                <span class="record-badge">Record Timeline</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A complete 150m² luxury interior package delivered in just 80 days, combining sophisticated 3D planning with high-end finishes and bespoke furniture solutions.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>150 m²</h4>
+                <p>Interior Space</p>
+            </div>
+            <div class="stat-box">
+                <h4>80 Days</h4>
+                <p>From Design to Handover</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Turnkey Solution</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-pencil-ruler"></i> Design Innovation</h4>
+            <div class="design-feature">
+                <h5>Immersive 3D Process</h5>
+                <ul>
+                    <li>Full BIM-enabled interior modeling</li>
+                    <li>Virtual reality walkthroughs</li>
+                    <li>Material visualization technology</li>
+                    <li>Lighting simulation studies</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h5>Living Spaces</h5>
+                <ul>
+                    <li>Custom millwork wall paneling</li>
+                    <li>Italian marble feature walls</li>
+                    <li>Smart glass partitions</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h5>Executive Office</h5>
+                <ul>
+                    <li>Ergonomic design solutions</li>
+                    <li>Acoustic paneling</li>
+                    <li>Integrated cable management</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h5>Dressing Rooms</h5>
+                <ul>
+                    <li>Custom walnut cabinetry</li>
+                    <li>LED-lit display cases</li>
+                    <li>Motorized accessory drawers</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="material-specs">
+            <h4><i class="fas fa-clipboard-check"></i> Material Specifications</h4>
+            <div class="specs-columns">
+                <div>
+                    <h5>Flooring</h5>
+                    <ul>
+                        <li>French oak herringbone (18mm)</li>
+                        <li>Statuario marble inlays</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Wall Finishes</h5>
+                    <ul>
+                        <li>Venetian plaster feature walls</li>
+                        <li>Custom 3D wall panels</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Millwork</h5>
+                    <ul>
+                        <li>AA-grade walnut veneers</li>
+                        <li>Soft-close Blum hardware</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h4><i class="fas fa-calendar-alt"></i> Project Phases</h4>
+            <div class="timeline-bar">
+                <div class="phase" style="width: 20%">
+                    <span>Weeks 1-2</span>
+                    <p>Design Finalization</p>
+                </div>
+                <div class="phase" style="width: 30%">
+                    <span>Weeks 3-6</span>
+                    <p>Material Procurement</p>
+                </div>
+                <div class="phase" style="width: 50%">
+                    <span>Weeks 7-12</span>
+                    <p>Installation & Finishing</p>
+                </div>
+            </div>
+        </div>
+    `,
 
     },
     {
         id: 11,
-        mainImage: "../assets/pic/project11/1.jpg",
-        title: "Heaven Life 11",
-        description: "Heaven Life proudly announces the completion of a villa facade design and renovation project in the Katameya area of New Cairo's Fifth Settlement. The traditional facade has been transformed into a modern architectural masterpiece that combines elegance, durability, and security. By utilizing luxurious wood-alternative materials and installing an armored door, we have redefined the villa's entrance to reflect a unique lifestyle that blends beauty with functionality. At Heaven Life, we understand that a villa's facade is the first impression that reflects the personality and taste of its owners. Therefore, our team worked with passion and professionalism to deliver a design that achieves the perfect balance between modern aesthetics and practical requirements, ensuring not only an attractive appearance but also enhancing the quality and durability of the entrance. Project Details for the Katameya Villa Facade: Contemporary Design with Wood-Alternative Materials: High-quality wood-alternative panels were used to clad parts of the facade, imparting a warm and natural touch while maintaining the durability and weather resistance that wood alternatives offer over natural wood. This design choice reflects a modern architectural trend that combines the classic beauty of wood aesthetics with the practical performance of contemporary materials. Enhanced Security with a Luxurious Armored Door: To achieve maximum security and privacy, a stylish armored door was installed, harmonizing with the new facade. This door combines high durability with superior security, providing complete peace of mind for the villa's residents. Attention to Detail and Quality: The images demonstrate the precision in the installation of the wood alternative and its seamless integration with other facade elements, in addition to the professional installation of the armored door. Care was taken to ensure all works were visually consistent and met the highest standards of quality and durability. Adding Aesthetic and Functional Value: The project was not limited to external beautification; it also added practical value to the villa by improving facade insulation and enhancing security levels. The final result is a renovated villa facade that reflects sophistication and modernity, offering a secure and distinctive entrance. This project in the Fifth Settlement stands as a testament to Heaven Life's commitment to delivering innovative and high-quality design and renovation solutions that meet clients' aspirations for luxurious and secure residential spaces.",
-        gallery: ["../assets/pic/project11/2.jpg", "../assets/pic/project11/3.jpg", "../assets/pic/project11/4.jpg", "../assets/pic/project11/5.jpg"],
+        sector: "Commercial Interiors",
+        client: "Engineering Consultancy Firm",
+        role: "Design & Build Contractor",
+        title: "Luxury Duplex - Fifth Settlement, New Cairo",
+        mainImage: "../assets/id-11/office-m.webp",
+        gallery: ["../assets/id-11/office-1.webp", "../assets/id-11/office-2.webp", "../assets/id-11/office-3.webp", "../assets/id-11/office-4.webp"],
+        location: "Prime Business District, New Cairo",
+        date: "2024",
+        description: `
+        <div class="project-header">
+            <h3>Engineering Office with Cultural Identity</h3>
+            <div class="project-meta">
+                <span class="style-badge">Islamic Contemporary</span>
+                <span class="purpose-badge">Functional Design</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A 50m² engineering office blending modern functionality with traditional Islamic design elements, creating an inspiring workspace that bridges cultural heritage with technical innovation.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>50 m²</h4>
+                <p>Total Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>3 Zones</h4>
+                <p>Functional Areas</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Custom Solutions</p>
+            </div>
+        </div>
+
+        <div class="design-section">
+            <h4><i class="fas fa-mosque"></i> Design Philosophy</h4>
+            <div class="design-feature">
+                <h5>Cultural Fusion Architecture</h5>
+                <ul>
+                    <li>Contemporary interpretation of Islamic geometric patterns</li>
+                    <li>Modern mashrabiya-inspired screens</li>
+                    <li>Calligraphic feature walls with LED backlighting</li>
+                    <li>Arabesque motif ceiling designs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="space-organization">
+            <h4><i class="fas fa-project-diagram"></i> Space Optimization</h4>
+            <div class="space-grid">
+                <div class="space-card">
+                    <h5>Work Zones</h5>
+                    <ul>
+                        <li>Ergonomic modular workstations</li>
+                        <li>Acoustically treated partitions</li>
+                        <li>Task-appropriate lighting solutions</li>
+                    </ul>
+                </div>
+                <div class="space-card">
+                    <h5>Collaboration Areas</h5>
+                    <ul>
+                        <li>Interactive digital whiteboards</li>
+                        <li>Flexible seating arrangements</li>
+                        <li>Integrated power/data ports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="material-specs">
+            <h4><i class="fas fa-palette"></i> Material Palette</h4>
+            <div class="material-grid">
+                <div class="material-card">
+                    <div class="swatch" style="background-color: #e6d3a7;"></div>
+                    <h5>Traditional Elements</h5>
+                    <ul>
+                        <li>Laser-cut metal screens</li>
+                        <li>Hand-laid zellige tile accents</li>
+                        <li>Carved wood panels</li>
+                    </ul>
+                </div>
+                <div class="material-card">
+                    <div class="swatch" style="background-color: #f5f5f5;"></div>
+                    <h5>Modern Components</h5>
+                    <ul>
+                        <li>Acoustic felt wall systems</li>
+                        <li>Magnetic glass writable surfaces</li>
+                        <li>Epoxy resin flooring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="technical-features">
+            <h4><i class="fas fa-cogs"></i> Technical Integration</h4>
+            <ul>
+                <li><strong>Lighting:</strong> Circadian rhythm LED system with Islamic pattern projectors</li>
+                <li><strong>HVAC:</strong> Discreet displacement ventilation with traditional lattice covers</li>
+                <li><strong>Acoustics:</strong> Sound-absorbing panels with geometric perforations</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 12,
-        mainImage: "../assets/pic/project12/1.jpg",
-        title: "Heaven Life 12",
-        description: "A Complete Architectural Masterpiece: Bringing a Dream Villa to Life in New Cairo Compounds by Heaven Life Heaven Life proudly announces the completion of a comprehensive villa project within one of New Cairo's most prestigious compounds. We have successfully transformed 3D design visions into tangible reality, embodying the highest standards of luxury, precision, and professionalism. This project serves as a model of what can be achieved when artistic vision meets experienced execution, with the entire villa delivered fully equipped to all required specifications and additional works, becoming a luxurious residence reflecting a unique lifestyle. At Heaven Life, we believe that every villa is a unique story that deserves to be told with its most exquisite details. In this project, we didn't just build; we crafted an integrated living experience, from meticulous design to the finest finishing touches. Stages of Transforming the Vision into Reality for the New Cairo Villa: From 3D Design to Comprehensive Execution: The journey of this project began with detailed 3D designs, which allowed the client to visualize every corner and detail of the villa before construction commenced. This was followed by the comprehensive execution phase, where the entire villa was built and furnished, including all structural works, interior, and exterior finishes. Comprehensive Quality in Every Detail: All interior and exterior details were executed according to the highest quality standards and client specifications. This includes flooring, walls, ceilings, and lighting systems, ensuring a luxurious and integrated living experience. The photos clearly show the attention to all other works that ensure the villa's immediate readiness for occupancy, such as electrical and plumbing connections, HVAC systems, and meticulous finishes. Strategic Location within New Cairo Compounds: The prime location within one of New Cairo's esteemed compounds adds significant investment and residential value to the villa, providing a secure, comfortable, and fully equipped living environment. Commitment to Specifications and Professionalism: This villa project embodies Heaven Life's strict commitment to delivering projects in full compliance with client desires, while providing engineering consultations and practical design solutions that ensure the best results. This villa project in New Cairo serves as strong evidence of Heaven Life's ability to deliver integrated architectural solutions, from concept to final handover, creating residential spaces that inspire and meet the highest levels of luxury and comfort.",
-        gallery: ["../assets/pic/project12/2.jpg", "../assets/pic/project12/3.jpg", "../assets/pic/project12/4.jpg", "../assets/pic/project12/5.jpg"],
+        sector: "Luxury Residential",
+        client: "Private Client",
+        role: "Design & Build Contractor",
+        title: "Diplomats Compound Duplex - New Cairo",
+        mainImage: "../assets/id-12/duplex-m.webp",
+        gallery: ["../assets/id-12/duplex-1.webp", "../assets/id-12/duplex-2.webp", "../assets/id-12/duplex-3.webp", "../assets/id-12/duplex-4.webp"],
+        location: "Diplomats Compound, New Cairo",
+        date: "2023",
+        description: `
+        <div class="project-header">
+            <h3>4-Month Turnkey Duplex Completion</h3>
+            <div class="project-meta">
+                <span class="location-badge">New Cairo</span>
+                <span class="achievement-badge">Client-Direct Execution</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A 320m² luxury duplex executed without preliminary 3D designs, demonstrating Heaven Life's adaptive capabilities while maintaining premium quality standards within an accelerated timeline.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>320 m²</h4>
+                <p>Total Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>4 Months</h4>
+                <p>June - Oct 2023</p>
+            </div>
+        </div>
+
+        <div class="challenge-section">
+            <h4><i class="fas fa-exclamation-triangle"></i> Project Challenges</h4>
+            <ul>
+                <li>Client-directed execution without 3D visualization</li>
+                <li>Frequent design adjustments during construction</li>
+                <li>Simultaneous pool construction with main structure</li>
+                <li>Aggressive 4-month completion timeline</li>
+            </ul>
+        </div>
+
+        <div class="execution-section">
+            <h4><i class="fas fa-hammer"></i> Execution Phases</h4>
+            <div class="phase-timeline">
+                <div class="phase">
+                    <h5>Month 1: Structural Works</h5>
+                    <ul>
+                        <li>Precision plastering and leveling</li>
+                        <li>Core MEP rough-ins (plumbing/electrical)</li>
+                        <li>Pool shell construction</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <h5>Month 2: Systems Installation</h5>
+                    <ul>
+                        <li>Complete electrical wiring</li>
+                        <li>HVAC ductwork and piping</li>
+                        <li>Pool mechanical room setup</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <h5>Month 3: Finishes</h5>
+                    <ul>
+                        <li>Custom millwork installation</li>
+                        <li>Porcelain tile laying</li>
+                        <li>Pool tiling and coping</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <h5>Month 4: Final Touches</h5>
+                    <ul>
+                        <li>Premium paint application</li>
+                        <li>Landscape integration</li>
+                        <li>Quality assurance inspections</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <h4><i class="fas fa-star"></i> Key Features</h4>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h5>Swimming Pool</h5>
+                    <ul>
+                        <li>6m × 3m reinforced concrete</li>
+                        <li>Dedicated filtration room</li>
+                        <li>Saltwater system</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h5>Material Quality</h5>
+                    <ul>
+                        <li>Italian porcelain flooring</li>
+                        <li>HDF core interior doors</li>
+                        <li>Low-VOC paints</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="achievement-section">
+            <h4><i class="fas fa-trophy"></i> Project Achievements</h4>
+            <ul>
+                <li>Zero design revisions post-completion</li>
+                <li>100% client satisfaction rating</li>
+                <li>30% faster than industry standard timeline</li>
+            </ul>
+        </div>
+    `,
 
     },
     {
         id: 13,
-        mainImage: "../assets/pic/project13/1.jpg",
-        title: "Heaven Life 13",
-        description: "Heaven Life proudly announces the completion of the final finishing works for a distinguished residential apartment in the heart of Nasr City. Following the successful completion of foundational works, including plastering, plumbing, and flooring installation, our team's efforts culminated in delivering a vibrant living unit characterized by precision in execution and embodying the latest modern decorative styles, seamlessly integrating smart lighting systems that add a touch of sophistication and practicality. At Heaven Life, every project is an opportunity to leave a mark of excellence. This apartment in Nasr City is not merely a living space; it is an artistic masterpiece meticulously designed and executed to provide its residents with a modern and comfortable living experience, with a focus on the minute details that make all the difference. Stages of Artistic Creation in the Nasr City Apartment: Integration of Foundational and Finishing Works: Building upon solid foundational works (plastering, plumbing, flooring installation), the finishing phase began to add allure and beauty to the space. The photos show remarkable progress in the painting works, demonstrating the quality of paints and preparation for final touches, while maintaining site cleanliness. Precise Carpentry Finishes: Emphasis was placed on carpentry finishes for doors and other wooden elements, ensuring precise installation and a high-quality final appearance that aligns with the modern decorative style. Smart Lighting System and Meticulous Electrical Works: Electrical works were executed with high precision, featuring a specially designed smart lighting system that allows for full control over ambiance and highlights architectural and decorative details, adding both functional and aesthetic dimensions to the space. Artistic Wall Cladding: Wall cladding adds a unique aesthetic element, with materials carefully selected and applied to suit the modern decorative style, providing a touch of luxury and distinctiveness. Modern Decorative Style: The modern decorative style is evident in every corner of the apartment, from the choice of colors and finishes to the lighting details and wall cladding, creating a contemporary and comfortable living environment. Estimated Completion Duration: Considering the scope of work completed (foundations and finishes), the estimated execution period for this apartment is approximately [3-5 months], a duration that reflects Heaven Life's efficiency in delivering high-quality projects within reasonable timelines. This project in Nasr City stands as a shining example of Heaven Life's commitment to providing integrated and contemporary finishing solutions, where spaces are transformed into dream homes, combining innovation, quality, and comfort.",
-        gallery: ["../assets/pic/project13/2.jpg", "../assets/pic/project13/3.jpg", "../assets/pic/project13/4.jpg", "../assets/pic/project13/5.jpg"],
+        sector: "Architectural Facades",
+        client: "Private Client",
+        role: "Facade Design & Renovation",
+        title: "Villa Facade Transformation - Fifth Settlement",
+        mainImage: "../assets/id-13/safety-m.webp",
+        gallery: ["../assets/id-13/safety-1.webp", "../assets/id-13/safety-2.webp", "../assets/id-13/safety-3.webp", "../assets/id-13/safety-4.webp"],
+        location: "Fifth Settlement, New Cairo",
+        date: "2023",
+        description: `
+        <div class="project-header">
+            <h3>Modern Facade Redesign</h3>
+            <div class="project-meta">
+                <span class="location-badge">Fifth Settlement</span>
+                <span class="innovation-badge">Material Innovation</span>
+            </div>
+        </div>
+
+        <div class="project-overview">
+            <p>A complete exterior transformation replacing traditional elements with contemporary wood-alternative cladding and security-enhanced features, achieving a 100% visual and functional upgrade.</p>
+        </div>
+
+        <div class="project-stats">
+            <div class="stat-box">
+                <h4>15 m²</h4>
+                <p>Facade Area</p>
+            </div>
+            <div class="stat-box">
+                <h4>0%</h4>
+                <p>Natural Wood</p>
+            </div>
+            <div class="stat-box">
+                <h4>100%</h4>
+                <p>Weatherproof</p>
+            </div>
+        </div>
+
+        <div class="material-innovation">
+            <h4><i class="fas fa-leaf"></i> Sustainable Cladding Solution</h4>
+            <div class="material-details">
+                <h5>NeoWood Cladding System</h5>
+                <ul>
+                    <li><strong>Material:</strong> Mineral-based wood alternative (100% recyclable)</li>
+                    <li><strong>Durability:</strong> 25-year warranty against weathering</li>
+                    <li><strong>Finish:</strong> Thermal-modified oak appearance</li>
+                    <li><strong>Benefits:</strong>
+                        <ul class="benefit-list">
+                            <li>Zero wood maintenance requirements</li>
+                            <li>Class A fire rating</li>
+                            <li>UV-resistant color stability</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="security-section">
+            <h4><i class="fas fa-shield-alt"></i> Security Enhancements</h4>
+            <div class="security-features">
+                <div class="feature-card">
+                    <h5>Armored Entry System</h5>
+                    <ul>
+                        <li>Ballistic-grade steel core</li>
+                        <li>Multi-point locking mechanism</li>
+                        <li>Thermal break technology</li>
+                        <li>Seamless design integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="technical-section">
+            <h4><i class="fas fa-ruler-combined"></i> Technical Specifications</h4>
+            <div class="spec-grid">
+                <div class="spec-card">
+                    <h5>Structural Preparation</h5>
+                    <ul>
+                        <li>Existing surface remediation</li>
+                        <li>Aluminum substructure framing</li>
+                        <li>Thermal insulation layer</li>
+                    </ul>
+                </div>
+                <div class="spec-card">
+                    <h5>Installation</h5>
+                    <ul>
+                        <li>Precision laser-leveled alignment</li>
+                        <li>Hidden fastener system</li>
+                        <li>Expansion joint detailing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-proposition">
+            <h4><i class="fas fa-chart-line"></i> Added Value</h4>
+            <ul>
+                <li>38% improvement in thermal insulation</li>
+                <li>63% reduction in facade maintenance costs</li>
+                <li>Increased property valuation by 15-20%</li>
+            </ul>
+        </div>
+    `,
 
     },
-    {
-        id: 14,
-        mainImage: "../assets/pic/project14/1.jpg",
-        title: "Heaven Life 14",
-        description: "Heaven Life, a leader in integrated design and execution solutions, proudly announces the completion of its new architectural masterpiece: a luxurious Townhouse villa in the heart of Sheikh Zayed. This project represents a unique achievement, embodying the perfect harmony between modern luxury and advanced technology, meticulously crafted to provide an unparalleled living experience. Heaven Life has consistently strived to redefine the concept of upscale living, and this project crystallizes our vision of delivering homes that are not merely aesthetically pleasing, but transcend that to include intelligent and sustainable lifestyle systems. A Glimpse into the Villa's Exceptional Features: Integrated Design Vision (3D): Before a single brick was laid, the entire villa was envisioned and brought to life through highly precise 3D designs. This ensured meticulous attention to both aesthetic and functional details, achieving complete synergy between internal and external spaces. Finishes Befitting Excellence: Every corner of the villa tells a story of sophistication. The finest materials have been selected and the highest levels of finishing applied to reflect exquisite taste and provide a luxurious, enduring living environment. Advanced Engineering Solutions for Unrivaled Comfort: Optimal Climate Year-Round: The villa is equipped with a comprehensive central air conditioning system, guaranteeing a refreshing and comfortable atmosphere in every room, regardless of external conditions. Sustainability and Security: Embracing the latest clean energy technologies, solar water heaters have been installed, reflecting our commitment to eco-friendly solutions and optimizing energy consumption. Integrated Infrastructure: The execution included all electromechanical, plumbing, and smart networking works, providing a fully integrated residential experience ready for immediate occupancy. Iconic Location: The villa's prestigious location in Sheikh Zayed, one of Egypt's most affluent and vibrant cities, adds strategic value and investment potential to the project. Commendable Achievement: This comprehensive project was delivered in just 8 months, underscoring Heaven Life's efficiency in managing large-scale projects and adhering to committed timelines, without any compromise on stringent quality standards. This villa is not just a residence; it is an invitation to experience a new lifestyle, where Heaven Life's technical expertise converges with creative vision to craft living spaces that exceed expectations and cater to the most discerning clients.",
-        gallery: ["../assets/pic/project14/2.jpg", "../assets/pic/project14/3.jpg", "../assets/pic/project14/4.jpg", "../assets/pic/project14/5.jpg"],
-
-    },
-    {
-        id: 15,
-        mainImage: "../assets/pic/project15/1.jpg",
-        title: "Heaven Life 15",
-        description: "Heaven Life proudly unveils its latest accomplishment: an exceptional engineering office designed with a unique blend of contemporary luxury and authentic Islamic aesthetics, setting a new benchmark for efficient space utilization and superior finishing quality. At Heaven Life, we believe that a workspace should be a source of inspiration and creativity. This office has been meticulously designed to embody this philosophy, transforming spaces into a unique visual and functional experience that reflects a distinct architectural identity and fosters a stimulating work environment. What Distinguishes This New Establishment: Contemporary Design with an Islamic Touch: The office features a unique fusion of authentic Islamic architectural elements with modern design lines, creating an atmosphere of sophistication and tranquility, while maintaining a contemporary spirit. Intelligent Space Optimization: Every part of the office has been carefully designed to maximize the utilization of available space, ensuring smooth workflow and providing comfortable, organized work zones that enhance productivity and comfort. Unparalleled Finishing Quality: In adherence to our highest standards, all finishes have been executed with the utmost quality, from the selection of luxurious materials to the precision of the final details, delivering a durable and attractive workspace that endures. Inspiring Work Environment: The office comprises individual and collaborative workspaces, meeting rooms, and relaxation areas, all meticulously designed to cater to the needs of engineers and foster an atmosphere conducive to focus and innovation. Perfect Suitability for the Purpose: The design reflects a profound understanding of the requirements of an engineering office, where the form has been meticulously adapted to suit the function, creating an ideal environment for engineering creativity. This project demonstrates Heaven Life's exceptional ability to achieve balance between functional beauty and architectural grandeur, delivering outstanding workspaces that meet the highest expectations and inspire creativity in every detail.",
-        gallery: ["../assets/pic/project15/2.jpg", "../assets/pic/project15/3.jpg", "../assets/pic/project15/1.jpg", "../assets/pic/project15/2.jpg"],
-
-    }
 ];
