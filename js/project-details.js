@@ -10,11 +10,17 @@ if (project) {
     document.getElementById("main-image").src = project.mainImage;
     document.getElementById("main-image").alt = project.title;
     document.getElementById("project-title").textContent = project.title;
-    document.getElementById("project-description").textContent = project.description;
+    document.getElementById("project-description").innerHTML = project.description;
     document.getElementById("gallery-image-1").src = project.gallery[0];
     document.getElementById("gallery-image-2").src = project.gallery[1];
     document.getElementById("gallery-image-3").src = project.gallery[2];
     document.getElementById("gallery-image-4").src = project.gallery[3];
+    document.getElementById('project-location').textContent = project.location;
+    document.getElementById('project-date').textContent = project.date;
+    document.getElementById('project-role').textContent = project.role;
+    document.getElementById('project-client').textContent = project.client;
+    document.getElementById('project-sector').textContent = project.sector;
+
 } else {
     // Fallback if project not found
     document.getElementById("project-title").textContent = "Project Not Found";
@@ -35,7 +41,7 @@ function closeModal() {
 }
 
 // Close modal when clicking outside the image
-window.onclick = function(event) {
+window.onclick = function (event) {
     const modal = document.getElementById("imageModal");
     if (event.target === modal) {
         modal.style.display = "none";

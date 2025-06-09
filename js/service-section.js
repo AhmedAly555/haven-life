@@ -1,50 +1,54 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Elements
-    const dynamicBg = document.getElementById('dynamicBackground');
-    const serviceItems = document.querySelectorAll('.service-item');
-    const defaultBg = '../assets/pic/3d.png';
-//construction -- interior design -- real estate development -- 3D decoration and finishing technologies
-    // Preload Images
-    function preloadImages() {
-        const imageUrls = [defaultBg];
-        serviceItems.forEach(item => {
-            if (item.dataset.bg) {
-                imageUrls.push(item.dataset.bg);
-            }
-        });
 
-        imageUrls.forEach(url => {
-            new Image().src = url;
-        });
-    }
+const serviceRows = document.querySelectorAll('.service-item');
+const bgCurrent = document.querySelector('.bg-image.current');
+const bgNext = document.querySelector('.bg-image.next');
 
-    // Set Default Background
-    function setDefaultBackground() {
-        dynamicBg.style.backgroundImage = `url(${defaultBg})`;
-        dynamicBg.classList.add('active');
-    }
+// الصورة الأساسية
+const defaultBackground = "../assets/pic/3d.webp";
+const Background2 = "../assets/pic/construction.webp";
+const Background3 = "../assets/pic/interiorDesign.webp";
+const Background4 = "../assets/pic/maintenance.webp";
+const Background5 = "../assets/pic/sSafety.webp";
+let currentBackground = defaultBackground;
 
-    // Setup Service Hover Effects
-    function setupServiceHover() {
-        serviceItems.forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                const bgImage = this.dataset.bg || defaultBg;
-                dynamicBg.style.backgroundImage = `url(${bgImage})`;
-            });
+// التحكم في الحالة
+let isTransitioning = false;
 
-            item.addEventListener('mouseleave', function() {
-                dynamicBg.style.backgroundImage = `url(${defaultBg})`;
-            });
-        });
-    }
+function switchBackground(newBg) {
+  if (newBg === currentBackground || isTransitioning) return;
 
-    // Initialize
-    function initServices() {
-        preloadImages();
-        setDefaultBackground();
-        setupServiceHover();
-    }
+  isTransitioning = true;
 
-    // Start
-    initServices();
+  // جهز الصورة التالية
+  bgNext.style.backgroundImage = `url('${newBg}')`;
+  bgNext.style.opacity = 1;
+  bgNext.style.zIndex = 2;
+  bgCurrent.style.zIndex = 1;
+
+  // انتظر نهاية الانتقال
+  const onTransitionEnd = () => {
+    // تم تبديل الصورة
+    bgCurrent.style.backgroundImage = `url('${newBg}')`;
+    bgCurrent.style.opacity = 1;
+    bgNext.style.opacity = 0;
+    currentBackground = newBg;
+    isTransitioning = false;
+
+    // نظّف الـ event
+    bgNext.removeEventListener('transitionend', onTransitionEnd);
+  };
+
+  bgNext.addEventListener('transitionend', onTransitionEnd);
+}
+
+// الأحداث
+serviceRows.forEach((row) => {
+  row.addEventListener('mouseenter', () => {
+    const newBg = row.getAttribute('data-bg');
+    if (newBg) switchBackground(newBg);
+  });
+
+  row.addEventListener('mouseleave', () => {
+    switchBackground(defaultBackground);
+  });
 });
