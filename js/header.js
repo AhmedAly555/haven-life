@@ -21,27 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
         homeLink.innerHTML = '<a href="/html/home.html">Home</a>';
         navLinks.insertBefore(homeLink, navLinks.firstChild);
     }
-
-    // القائمة الجانبية
-    const hamburger = document.getElementById("hamburger");
-    const navList = document.querySelector("nav ul");
-    const nav = document.querySelector("nav");
-
-    if (hamburger && navList) {
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navList.classList.toggle("show");
-
-            nav.style.display = navList.classList.contains("show") ? "block" : "none";
-        });
-    }
-
-    // إغلاق القائمة عند الضغط على رابط
-    document.querySelectorAll('#nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('show');
-            hamburger.classList.remove('active');
-            nav.style.display = "none";
-        });
-    });
+    
 });
