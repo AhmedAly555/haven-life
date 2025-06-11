@@ -5,11 +5,11 @@ let interval;
 function initSlider() {
     slides = document.querySelectorAll(".slide");
     dots = document.querySelectorAll(".dot");
-    
+
     showSlide(currentSlide);
-    
+
     interval = setInterval(nextSlide, 5000);
-    
+
     dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
             clearInterval(interval);
@@ -29,10 +29,10 @@ function showSlide(index) {
     slides.forEach(slide => {
         slide.classList.remove("active");
     });
-    
+
     // إظهار الشريحة الحالية
     slides[index].classList.add("active");
-    
+
     // تحديث نقاط التنقل
     dots.forEach(dot => dot.classList.remove("active"));
     dots[index].classList.add("active");
