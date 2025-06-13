@@ -13,7 +13,27 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logoBlue.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="spaceh"></div>
     <div class="container">
         <div class="section">
@@ -21,8 +41,13 @@
                 <div class="divider"></div>
                 <h1>CONTACT US</h1>
                 <h1>Let's Get in Touch</h1>
-                <p id="overview-description">Email us on heavenlife075@gmail.com and our respective teams will get back
-                    to you soon.</p>
+                <p id="overview-description">
+                    Email us on
+                    <a href="mailto:heavenlife075@gmail.com" class="highlight-email">
+                        heavenlife075@gmail.com
+                    </a>
+                    and our respective teams will get back to you soon.
+                </p>
             </div>
             <div class="image-content">
                 <img src="../assets/pic/contact.webp" alt="Contact Image 1">
@@ -32,12 +57,12 @@
             <div class="text-content">
                 <div class="divider"></div>
                 <h1>FIND US IN</h1>
-                <h1>Locations</h1>
+                <h1>Location</h1>
                 <div class="locations">
                     <a>Egypt</a>
 
                 </div>
-                <p id="overview-description2">Cairo<br>New cairo fifth settlement - Arabella , Egypt<br>Tel:
+                <p id="overview-description2">New cairo fifth settlement - Arabella , Egypt<br>Tel:
                     +201111446864<br>Tel: +201000194883</p>
                 <a href="https://www.google.com/maps/place/%D8%A3%D8%B1%D8%A7%D8%A8%D9%8A%D9%84%D8%A7%D8%8C+%D9%82%D8%B3%D9%85+%D8%A3%D9%88%D9%84+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9+%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC+4721201%E2%80%AD/@29.9875965,31.4341874,17z/data=!3m1!4b1!4m6!3m5!1s0x14583caf672926eb:0xce39405e14b543fe!8m2!3d29.9871188!4d31.4356185!16s%2Fg%2F11rxmy7lg?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
                     class="button" target="_blank">Get Directions</a>
@@ -64,16 +89,7 @@
             <p>© 2025 Heaven Life. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        fetch("../html/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/header.js";
-                document.body.appendChild(script);
-            });
-    </script>
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         new TypeIt("#overview-description", {

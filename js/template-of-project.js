@@ -1,6 +1,5 @@
 // Array of projects data
 
-
 const projects = [
     {
         id: 1,

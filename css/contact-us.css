@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 .button {
     margin-bottom: 5px;
 }
@@ -32,8 +33,10 @@ body {
 
 .text-content {
     flex: 1;
-    padding: 20px;
+    padding: 0px;
+
 }
+
 .text-content h1 {
     color: #1A5276;
     /* Darkened blue */
@@ -45,6 +48,20 @@ body {
 .text-content p {
     font-size: 1.1em;
     color: #7f8c8d;
+}
+
+.highlight-email {
+    color: #7f8c8d;
+    /* لون مميز */
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s;
+    font-size: .9em;
+}
+
+.highlight-email:hover {
+    color: #7f8c8d;
+    /* لون مختلف عند المرور */
 }
 
 .image-content {
@@ -105,6 +122,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -115,6 +133,7 @@ body {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -125,9 +144,11 @@ body {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -137,9 +158,11 @@ body {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -147,12 +170,76 @@ body {
 
 @keyframes stretch {
     0% {
-        width: 50px;
+        width: 100px;
     }
+
     50% {
-        width: 70px;
+        width: 130px;
     }
+
     100% {
-        width: 50px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        /* تخلي العناصر فوق بعض */
+        gap: 20px;
+        /* تقليل التباعد */
+        text-align: center;
+        /* توسيط المحتوى */
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .locations {
+        justify-content: center;
+        display: flex;
+    }
+
+    .text-content h1,
+    .text-content p {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        font-size: 1.4em;
+        /* تكبير بسيط للقراءة */
+    }
+
+    .locations a {
+        font-size: 0px;
+        font-weight: bold;
+    }
+
+    .image-content {
+        display: none;
+        /* إخفاء قسم الصور تمامًا */
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        /* مسافة بسيطة بينهم */
+    }
+
+    .text-content h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+
+    .image-content img {
+        display: none;
+        width: 0;
+        height: 0;
     }
 }

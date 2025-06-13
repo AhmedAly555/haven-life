@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 0px;
     position: relative;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .gallery-img {
-    width: 200px;
+    width: 250px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -236,4 +236,40 @@
     color: #333;
     font-weight: 500;
     padding-left: 100px;
+}
+
+@media (max-width: 768px) {
+    #project-title {
+        padding-left: 10px;
+
+    }
+
+    .project-details-section h2 {
+        padding-left: 10px;
+    }
+
+    #project-description {
+        padding-left: 10px;
+    }
+
+    .project-meta-grid {
+        margin: 25px -100px;
+        padding: 15px 0px;
+        padding-right: 200px;
+    }
+
+    .project-details-section {
+        padding: 60px 10px;
+    }
+
+    .project-gallery {
+        align-items: center;
+        margin-right: -100px;
+        width: 100%;
+    }
+
+    .gallery-img {
+        width: 175px;
+        padding-left: 0px;
+    }
 }

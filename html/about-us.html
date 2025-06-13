@@ -15,18 +15,27 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <script>
-        fetch("../html/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/header.js";
-                document.body.appendChild(script);
-            });
-    </script>
-
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logoBlue.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="spaceh"></div>
 
@@ -49,10 +58,10 @@
                     have specialized in real estate development, building, and the
                     latest 3D finishing techniques. Our expertise extends to the design and renovation of commercial
                     centers, hospitals, and a wide range of supply services. With a commitment to quality, innovation,
-                    and precision, HEAVENLIFE has become
+                    and precision, HEAVEN LIFE has become
                     a trusted name in the field, delivering projects that combine aesthetics, functionality, and
                     cutting-edge technology.</p>
-                <button>Read More</button>
+                
             </div>
         </div>
 
@@ -63,9 +72,8 @@
                     execution, and elegant finishes. Our team is dedicated to providing top-tier services at competitive
                     prices, making us a standout choice in the market. Whether it's a large-scale
                     construction project or a high-end interior makeover, we deliver with unmatched efficiency and
-                    craftsmanship. When you choose HEAVENLIFE, you choose excellence, affordability, and results that
+                    craftsmanship. When you choose HEAVEN LIFE, you choose excellence, affordability, and results that
                     speak for themselves.</p>
-                <button>Read More</button>
             </div>
             <img src="../assets/pic/over2.webp" alt="Building">
         </div>
@@ -90,7 +98,7 @@
     </footer>
 
     <script src="../js/about-us.js"></script>
-    <script src="../js/header.js"></script>
+    <script src="../js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         new TypeIt("#overview-description", {

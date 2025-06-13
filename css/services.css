@@ -80,6 +80,11 @@ body {
         flex-direction: column !important;
         text-align: center;
     }
+
+    .services-hero {
+        max-width: 90%;
+    }
+
     .service img {
         width: 100%;
         height: auto;

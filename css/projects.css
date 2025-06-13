@@ -20,18 +20,23 @@
     overflow: hidden;
     /* عشان الـ blur يفضل جوة */
 }
+
 .services-hero::before {
     background-image: url('/assets/pic/serviceBackground.webp');
 }
+
 .about-us-hero::before {
     background-image: url('/assets/pic/aboutus.webp');
 }
+
 .latest-updates-hero::before {
     background-image: url('/assets/pic/latestproject.webp');
 }
+
 .projects-hero::before {
     background-image: url('/assets/pic/projects.webp');
 }
+
 .projects-hero::before,
 .latest-updates-hero::before,
 .services-hero::before,
@@ -65,6 +70,7 @@
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -96,7 +102,7 @@
 .section-header h1 {
     display: inline-block;
     position: relative;
-    font-size: 26px;
+    font-size: 25px;
     font-weight: bold;
     color: #fff;
     margin-bottom: 5px;
@@ -117,6 +123,7 @@
     background-color: white;
     transform: translateY(-50%);
 }
+
 .about-us-hero h1::after {
     content: '';
     display: inline-block;
@@ -130,6 +137,7 @@
     background-color: white;
     transform: translateY(-50%);
 }
+
 .latest-updates-hero h1::after {
     content: '';
     display: inline-block;
@@ -143,6 +151,7 @@
     background-color: white;
     transform: translateY(-50%);
 }
+
 .projects-hero h1::after {
     content: '';
     display: inline-block;
@@ -156,6 +165,7 @@
     background-color: white;
     transform: translateY(-50%);
 }
+
 .section-header p {
     font-size: 55px;
     font-weight: bold;
@@ -194,6 +204,7 @@
         opacity: 0;
         transform: translateY(50px) scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(0.95);
@@ -336,6 +347,7 @@
 /* Phone */
 
 @media (max-width: 768px) {
+
     .projects-grid,
     .latest-updates-grid {
         grid-template-columns: 1fr;
@@ -343,19 +355,46 @@
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
     }
+
     .project-card,
     .latest-update-card {
         scroll-snap-align: start;
         min-width: 85vw;
         animation-delay: calc(var(--order) * 0.05s) !important;
     }
+
     .projects-hero h1,
     .latest-updates-hero h1 {
-        font-size: 2.2rem;
+        font-size: 1.5rem;
     }
+
     .projects-hero p,
     .latest-updates-hero p {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
+    }
+
+    .section-header {
+        text-align: left;
+        position: relative;
+        padding-left: 10px;
+    }
+
+
+    /* UnderLine*/
+    .services-hero h1::after {
+        margin-left: 125px;
+    }
+
+    .about-us-hero h1::after {
+        margin-left: 130px;
+    }
+
+    .latest-updates-hero h1::after {
+        margin-left: 200px;
+    }
+
+    .projects-hero h1::after {
+        margin-left: 125px;
     }
 }
 
@@ -383,6 +422,7 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
