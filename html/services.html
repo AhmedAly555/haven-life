@@ -17,17 +17,27 @@
 </head>
 
 <body>
-    <div id="header"></div>
-    <script>
-        fetch("../html/header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/header.js";
-                document.body.appendChild(script);
-            });
-    </script>
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logoBlue.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="spaceh"></div>
     <section class="services-hero">
         <div class="section-header">
@@ -154,7 +164,6 @@
 
     <script src="../js/script.js"></script>
     <script src="../js/services.js"></script>
-    <script src="../js/header.js"></script>
 
 </body>
 

@@ -13,7 +13,27 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../assets/pic/logoBlue.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="../html/about-us.html">About Us</a></li>
+                <li><a href="../html/latest-updates.html">Updates</a></li>
+                <li><a href="../html/projects.html">Projects</a></li>
+                <li><a href="../html/services.html">Services</a></li>
+                <li><a href="../html/contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="spaceh"></div>
     <main class="projects-page">
         <section class="projects-hero">
@@ -120,16 +140,6 @@
         </section>
     </main>
 
-    <script>
-        fetch("../html/header.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("header").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../js/header.js";
-                document.body.appendChild(script);
-            });
-    </script>
 
     <footer>
         <div class="footer-content">
@@ -149,7 +159,6 @@
         </div>
     </footer>
     <script src="../js/projects-filter.js"></script>
-    <script src="../js/script.js"></script>
     <script src="../js/header.js"></script>
     <script src="../js/template-of-project.js"></script>
     <script src="../js/project-details.js"></script>

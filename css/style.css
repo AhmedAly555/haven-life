@@ -23,7 +23,7 @@ header {
     align-items: center;
     padding: 15px 450px;
     position: absolute;
-    width: 110%;
+    width: 100%;
     left: 0;
     color: white;
     z-index: 10;
@@ -44,6 +44,7 @@ header {
         opacity: 0;
         transform: scale(0.95);
     }
+
     100% {
         opacity: 1;
         transform: scale(1.1);
@@ -66,6 +67,7 @@ header {
     from {
         width: 0%;
     }
+
     to {
         width: 100%;
     }
@@ -131,27 +133,26 @@ header nav a:hover::after {
     width: 100%;
 }
 
-
-/* menu ☰،*/
-
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
-    z-index: 9999;
+    z-index: 1001;
 }
 
 .hamburger span {
     height: 3px;
-    width: 25px;
+    width: 30px;
     background: white;
+    margin: 4px 0;
     border-radius: 2px;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
+    background: white;
+    font-weight: bold;
 }
 
 .hamburger.active span:nth-child(2) {
@@ -160,85 +161,73 @@ header nav a:hover::after {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+    background: white;
+    font-weight: bold;
 }
 
+/* ===== قائمة الموبايل ===== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        position: absolute;
-        right: 20px;
-        top: 50px;
+        margin-top: -3.5%;
     }
-    nav ul {
-        display: none !important;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 180px;
-        padding: 15px 10px;
-        border-radius: 8px;
-    }
-    /* إظهار القائمة لما يتضاف الكلاس show */
-    nav ul.show {
-        display: flex !important;
-    }
-    nav ul li {
-        margin: 10px 0;
-        margin-left: 0;
-    }
-    nav ul li a {
-        font-size: 16px;
-    }
+
     header {
-        padding: 15px 20px;
+        padding: 10px 15px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
-    header .logo img {
-        height: 100px;
+
+    .logo img {
+        margin-left: 60%;
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #da6a32;
+        transform: translateY(-100%);
+        opacity: .5;
+        transition: transform 1.4s ease, opacity 1.4s ease;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        z-index: 1000;
+        pointer-events: none;
+    }
+
+
+
+    nav ul {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    nav.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #nav-links li {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        align-items: center;
     }
 }
 
-
-/* @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        position: absolute;
-        right: 20px;
-        top: 50px;
-    }
-    // إخفاء القائمة افتراضياً 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        // تحت الهيدر 
-        right: 20px;
-        width: 180px;
-        padding: 15px 10px;
-        border-radius: 8px;
-    }
-    //إظهار القائمة عند إضافة كلاس show 
-    nav ul.show {
-        display: flex;
-    }
-    nav ul li {
-        margin: 10px 0;
-        margin-left: 0;
-    }
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    header {
-        padding: 15px 20px;
-    }
-    header .logo img {
-        height: 100px;
-    }
-} */
 
 footer {
     background-color: transparent;
@@ -291,29 +280,18 @@ footer .social a img:hover {
     .footer-content {
         flex-wrap: nowrap;
     }
+
     .footer-content p {
         flex: 1;
         text-align: left;
     }
+
     .footer-content .social {
         justify-content: flex-end;
         flex: 1;
     }
 }
 
-
-/*
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 5.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-  */
 
 .section-title,
 .section-subtitle {
@@ -327,24 +305,16 @@ footer .social a img:hover {
 }
 
 
-/* Responsive Design */
-
-@media (max-width: 768px) {
-    header {
-        padding: 10px 15px;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
 
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.5rem;
     }
+
     .section-subtitle {
         font-size: 1rem;
     }
+
     .explore-button,
     .news-btn,
     .projects-btn {
@@ -361,15 +331,54 @@ footer .social a img:hover {
         flex-direction: column;
         gap: 20px;
     }
+
     .service-row {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .service-item {
         width: 100%;
     }
+
     .vertical-divider {
         display: none;
     }
+}
+
+nav.show li {
+    animation: fadeSlideDown 0.5s ease forwards;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav.show li:nth-child(1) {
+    animation-delay: 0.9s;
+}
+
+nav.show li:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+nav.show li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+nav.show li:nth-child(4) {
+    animation-delay: 1.8s;
+}
+
+nav.show li:nth-child(5) {
+    animation-delay: 2.1s;
 }
