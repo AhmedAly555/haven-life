@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // إضافة Event Listeners للفلاتر
     locationFilter.addEventListener("change", filterProjects);
     dateFilter.addEventListener("change", filterProjects);
     sectorFilter.addEventListener("change", filterProjects);

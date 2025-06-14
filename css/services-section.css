@@ -4,7 +4,6 @@
     overflow: hidden;
     text-align: center;
     background: transparent;
-    /* خلفية احتياطية */
 }
 
 .services-wrapper {
@@ -136,7 +135,6 @@
     perspective: 1000px;
 }
 
-/* تأثير إضافي للخدمة عند hover */
 .service-item:hover h3 {
     transform: translateY(-8px);
     transition: transform 0.3s ease;
@@ -177,21 +175,17 @@
 
 .service-item.wide-service {
     width: 50%;
-    /* أو أي قيمة أكبر */
     margin-right: 30px;
-    /* مساحة إضافية */
 }
 
 .service-item:not(.wide-service) {
     width: calc(25% - 20px);
-    /* توزيع باقي المساحة */
 }
 
 .service-row {
     display: flex;
     align-items: center;
     flex-grow: 1;
-    /* لملء المساحة المتاحة */
     position: relative;
     cursor: pointer;
 }
@@ -202,7 +196,6 @@
     background-color: white;
     margin: 0 20px;
     align-self: stretch;
-    /* ليمتد بطول العنصر الأب */
 }
 
 .service-row:last-child .vertical-divider {
@@ -221,11 +214,8 @@
     letter-spacing: 0.5px;
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     will-change: transform;
-    /* تحسين أداء الحركة */
     backface-visibility: hidden;
-    /* منع التشويش */
     display: inline-block;
-    /* ضروري لتحريك النص فقط */
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -248,7 +238,6 @@
         padding: 20px;
     }
 
-    /* نستخدم grid بدل flex */
     .services-list {
         display: flex !important;
         flex-direction: column;
@@ -266,9 +255,7 @@
     .service-item {
         width: 100% !important;
         text-align: left;
-        /* أو center / right */
         padding: 0;
-        /* نلغي أي padding افتراضي */
         margin-bottom: 0px;
     }
 

@@ -23,7 +23,6 @@ function initStaggeredAnimation(selectors, options = {}) {
     elements.forEach(el => observer.observe(el));
 }
 
-// الاستخدام
 document.addEventListener('DOMContentLoaded', () => {
     initStaggeredAnimation(['.news-card', '.projects-card'], {
         delay: 150,

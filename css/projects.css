@@ -18,7 +18,6 @@
     animation: fadeIn 1s ease-out;
     background-color: transparent;
     overflow: hidden;
-    /* عشان الـ blur يفضل جوة */
 }
 
 .services-hero::before {
@@ -51,7 +50,6 @@
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(3.5px);
-    /* البلور */
     z-index: 1;
 }
 
@@ -185,7 +183,6 @@
 .project-card,
 .latest-update-card {
     text-decoration: none;
-    /* يشيل الخط الأزرق تحت النصوص */
     color: inherit;
     border: 1px solid #eee;
     border-radius: 8px;

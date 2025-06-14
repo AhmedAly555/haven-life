@@ -4,21 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector("header");
   const navList = document.getElementById("nav-links");
 
-  // عند الضغط على زر الهامبورجر
   hamburger.addEventListener("click", (e) => {
     e.stopPropagation();
 
-    // Toggle classes
     nav.classList.toggle("show");
-    header.classList.toggle("center-logo");
+    header.classList.toggle("menu-open");
     hamburger.classList.toggle("active");
     navList.classList.toggle("show");
 
-    // التحكم في scroll الجسم
     document.body.style.overflow = navList.classList.contains("show") ? "hidden" : "auto";
   });
 
-  // عند الضغط في أي مكان خارج القائمة أو زر الهامبورجر
   document.addEventListener("click", (e) => {
     if (
       nav.classList.contains("show") &&
@@ -28,19 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
       nav.classList.remove("show");
       navList.classList.remove("show");
       hamburger.classList.remove("active");
-      header.classList.add("center-logo");
+      header.classList.remove("menu-open");
       document.body.style.overflow = "auto";
     }
   });
 
-  // عند تحميل الصفحة على الموبايل
   window.addEventListener("load", () => {
     if (window.innerWidth <= 768) {
       header.classList.add("center-logo");
     }
   });
 
-  // عند تغيير حجم الشاشة
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       header.classList.remove("center-logo");
@@ -51,5 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
+
 });

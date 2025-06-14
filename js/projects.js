@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
             grid.scrollLeft = scrollLeft - walk;
         });
 
-        // دعم اللمس
         grid.addEventListener('touchstart', (e) => {
             isDown = true;
             startX = e.touches[0].pageX - grid.offsetLeft;

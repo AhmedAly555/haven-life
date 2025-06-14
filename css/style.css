@@ -189,7 +189,7 @@ header nav a:hover::after {
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #da6a32;
+        background-color: #b66943;
         transform: translateY(-100%);
         opacity: .5;
         transition: transform 1.4s ease, opacity 1.4s ease;
@@ -225,6 +225,7 @@ header nav a:hover::after {
 
     nav {
         align-items: center;
+        text-align: center;
     }
 }
 
