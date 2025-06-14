@@ -45,12 +45,12 @@ body {
 }
 
 .text-content p {
-    font-size: 1.1em;
-    color: #7f8c8d;
+    font-size: 1.0em;
+    color: #2c3e50d3;
 }
 
 .highlight-email {
-    color: #7f8c8d;
+    color: #2c3e50;
     font-weight: bold;
     text-decoration: underline;
     transition: color 0.3s;
@@ -58,7 +58,7 @@ body {
 }
 
 .highlight-email:hover {
-    color: #7f8c8d;
+    color: #2c3e50;
 }
 
 .image-content {
