@@ -1,10 +1,11 @@
-/* Global styles */
 
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: #fff;
     color: #333;
+    overflow-x: hidden;
+
 }
 
 .about-section {
@@ -12,15 +13,12 @@ body {
 }
 
 
-/* Container holding image + text */
 
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* يمركز العناصر في النص */
     gap: 300px;
-    /* مسافة بسيطة بين الصورة والنص */
     margin-bottom: 100px;
     opacity: 0;
     transform: translateY(50px);
@@ -33,7 +31,6 @@ body {
     text-align: center;
 }
 
-/* Image styling */
 
 .container img {
     width: 45%;
@@ -42,9 +39,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-
-
-/* Text box styling */
 
 .text-box {
     width: 45%;
@@ -77,7 +71,6 @@ body {
 }
 
 
-/* Show animation trigger */
 
 .show {
     opacity: 1;
@@ -85,7 +78,6 @@ body {
 }
 
 
-/* Initial transform: text and image slide from sides */
 
 .left-slide .text-box {
     transform: translateX(150px);
@@ -104,7 +96,6 @@ body {
 }
 
 
-/* When in viewport: bring to center */
 
 .left-slide.show .text-box,
 .right-slide.show .text-box,
@@ -175,6 +166,12 @@ body {
         margin-bottom: 20px;
         margin-top: 20px;
     }
+
+    .container {
+        gap: 0px !important;
+        overflow-x: hidden;
+    }
+
 
     .container img {
         width: 80%;

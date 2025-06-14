@@ -8,7 +8,7 @@ function revealServices() {
         if (serviceTop < triggerBottom) {
             service.classList.add('visible');
         } else {
-            service.classList.remove('visible'); // عشان يحصل تفاعل دايمًا مش مرة واحدة
+            service.classList.remove('visible');
         }
     });
 }

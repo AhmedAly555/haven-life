@@ -25,15 +25,12 @@ function nextSlide() {
 }
 
 function showSlide(index) {
-    // إخفاء جميع الشرائح
     slides.forEach(slide => {
         slide.classList.remove("active");
     });
 
-    // إظهار الشريحة الحالية
     slides[index].classList.add("active");
 
-    // تحديث نقاط التنقل
     dots.forEach(dot => dot.classList.remove("active"));
     dots[index].classList.add("active");
 }
