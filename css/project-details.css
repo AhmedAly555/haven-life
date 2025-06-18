@@ -4,7 +4,9 @@
     color: inherit;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 .project-card:hover {
     cursor: pointer;
@@ -26,7 +28,10 @@
 }
 
 .modal-content {
-    margin: 15% auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     max-width: 80%;
     max-height: 80%;
@@ -151,9 +156,7 @@
     transition: transform 0.3s ease;
 }
 
-.gallery-img:hover {
-    transform: scale(1.05);
-}
+.gallery-img:hover { transform: scale(1.05); }
 
 
 /*Animation*/
@@ -200,17 +203,11 @@
     }
 }
 
-.meta-item:nth-child(1) {
-    animation-delay: 0.2s;
-}
+.meta-item:nth-child(1) { animation-delay: 0.2s; }
 
-.meta-item:nth-child(2) {
-    animation-delay: 0.4s;
-}
+.meta-item:nth-child(2) { animation-delay: 0.4s; }
 
-.meta-item:nth-child(3) {
-    animation-delay: 0.6s;
-}
+.meta-item:nth-child(3) { animation-delay: 0.6s; }
 
 .meta-item i {
     color: #f26722;
@@ -236,37 +233,57 @@
 }
 
 @media (max-width: 768px) {
-    #project-title {
-        padding-left: 10px;
+    #project-title { padding-left: 10px; }
 
-    }
+    .project-details-section h2 { padding-left: 10px; }
 
-    .project-details-section h2 {
-        padding-left: 10px;
-    }
-
-    #project-description {
-        padding-left: 10px;
-    }
+    #project-description { padding-left: 10px; }
 
     .project-meta-grid {
         margin: 25px -100px;
         padding: 15px 0px;
         padding-right: 200px;
     }
-
-    .project-details-section {
-        padding: 60px 10px;
+    
+    .meta-item>div {
+        text-align: left;
+        align-items: start;
     }
+
+    .meta-item h4 { padding-left: 0px; }
+
+    .meta-item p { padding-left: 0px; }
+
+    .meta-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .project-details-section { padding: 60px 10px; }
 
     .project-gallery {
         align-items: center;
         margin-right: -100px;
         width: 100%;
+        padding: 0 15px;
+        margin: 0;
     }
 
     .gallery-img {
         width: 175px;
         padding-left: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-gallery {
+        justify-content: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .gallery-img {
+        width: calc(50% - 10px);
+        height: auto;
     }
 }
