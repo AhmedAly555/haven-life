@@ -6,14 +6,14 @@
 }
 
 .latest-news {
-    padding: 80px 20px;
+    padding: 80px 100px;
     /* position of all data in container */
     background: linear-gradient(to bottom, #eff6ff 45%, #ffffff 0%);
     /* background-color of container */
 }
 
 .projects {
-    padding: 80px 20px;
+    padding: 80px 100px;
     /* position of all data in container */
     background: linear-gradient(to top, #eff6ff 45%, #ffffff 0%);
     /* background-color of container */
@@ -243,13 +243,18 @@
         margin-bottom: -100px;
         padding: 40px 10px;
     }
-
+    
+    .projects {
+        margin-top: -120px;
+        margin-bottom: -100px;
+        padding: 150px 10px;
+    }
     .section {
         margin-left: 0;
         margin-right: 0;
         align-items: flex-start;
         text-align: start;
-        padding: 0 10px;
+        padding: 100 10px;
     }
 
     .scrollable-news,

@@ -4,11 +4,12 @@
     overflow: hidden;
     text-align: center;
     background: transparent;
+    justify-content: center;
 }
 
 .services-wrapper {
     position: relative;
-    margin-left: 250px;
+    margin-left: 18%;
     max-width: 1300px;
     height: 700px;
     display: flex;
@@ -16,6 +17,8 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.500);
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -145,7 +148,13 @@
     transform: scale(1);
 }
 
+.what-we-do .section-title {
+    margin-left: 10%;
+}
 
+.what-we-do .section-subtitle {
+    margin-left: 10%;
+}
 
 .services-list {
     display: flex;
@@ -242,14 +251,27 @@
         display: flex !important;
         flex-direction: column;
         gap: 10px;
-        padding: 20px;
+        padding: 0px;
         width: 100%;
         align-items: stretch;
     }
 
+    .what-we-do {
+        padding: 150px 20px;
+    }
+
+    .what-we-do .section {
+        padding: 0px 0px;
+        text-align: start;
+        margin-right: 0%;
+    }
+
     .what-we-do .section-subtitle {
-        font-size: 1.0em;
-        inline-size: 50%;
+        margin-left: 0%;
+    }
+
+    .what-we-do .section-title {
+        margin-left: 0%;
     }
 
     .service-item {
@@ -266,13 +288,14 @@
         font-size: 1.1em;
         padding: 20px 0px;
     }
+
     .service-item.wide-service {
-        margin-right: 0 !important;  
-        padding-left: 0 !important; 
+        margin-right: 0 !important;
+        padding-left: 0 !important;
     }
 
     .service-item.wide-service h3 {
-        padding-left: 0 !important;  
+        padding-left: 0 !important;
     }
 
     .vertical-divider {
