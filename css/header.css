@@ -148,11 +148,7 @@ header nav a:hover::after {
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        margin-top: -3.5%;
-    }
+@media (max-width: 768px) {        
 
     .hamburger span {
         background: #46688a;
@@ -169,15 +165,17 @@ header nav a:hover::after {
     .logo {
         position: absolute;
         left: 50%;
-        top: 100%;
         transform: translateX(-50%);
+        top: 10px;
         z-index: 1001;
     }
 
     .hamburger {
+        display: flex;
         position: absolute;
         right: 20px;
-        top: 400%;
+        top: 250%;
+        z-index: 1002;
     }
 
     header {
@@ -187,6 +185,7 @@ header nav a:hover::after {
         position: relative;
         justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
 

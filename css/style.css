@@ -165,11 +165,13 @@ header nav a:hover::after {
     font-weight: bold;
 }
 
-/* ===== قائمة الموبايل ===== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        margin-top: -3.5%;
+        position: absolute;
+        right: 20px;
+        top: 270%;
+        z-index: 1002;
     }
 
     header {
@@ -180,8 +182,12 @@ header nav a:hover::after {
         align-items: center;
     }
 
-    .logo img {
-        margin-left: 60%;
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+        z-index: 1001;
     }
 
     nav {
@@ -198,6 +204,8 @@ header nav a:hover::after {
         padding: 20px;
         z-index: 1000;
         pointer-events: none;
+        align-items: center;
+        text-align: center;
     }
 
 
@@ -211,6 +219,14 @@ header nav a:hover::after {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
+    }
+
+    nav.show~.logo {
+        display: none;
+    }
+
+    header.menu-open .logo {
+        z-index: 0;
     }
 
     #nav-links li {
